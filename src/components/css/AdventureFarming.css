@@ -1,0 +1,21 @@
+.af-intro span {
+    text-indent: 5%;
+    font-size: 1.3em;
+}
+.af-table h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.af-table table,
+.af-table table th {
+    text-align: center;
+}
+.af-table table th:first-child {
+    text-align: left !important;
+}
+.af-table table td:first-child{
+    padding-left: 12px;
+    text-align: left;
+}
