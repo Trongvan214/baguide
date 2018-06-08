@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Grid, Tab, Tabs } from 'react-bootstrap';
+import { Grid, Tab, Tabs, Media  } from 'react-bootstrap';
+import './css/Partners.css';
+import attBuff from './img/attbuff.JPG';
+import defBuff from './img/defbuff.JPG';
 
 export default class AdventureFarming extends Component {
     render(){
@@ -8,6 +11,19 @@ export default class AdventureFarming extends Component {
                 <Tabs defaultActiveKey={1} id="buffdebuff">
                     <Tab eventKey={1} title="Buffs/Debuffs">
                         <div className="partners-buff">
+                            <CustomMedia 
+                                pos="left"
+                                term="ATK Enhance"
+                                definition="Increase ATK by 50%"
+                                img={attBuff}
+                            />
+                            <CustomMedia 
+                                pos="right"
+                                term="DEF Enhance"
+                                definition="Increase DEF by 70%"
+                                img={defBuff}
+                            />
+                    
                             <h1>Here are the list of buffs you can get in the game</h1>
                             <p>ATK Enhance: <small>Increase ATK by 50%</small></p>
                             <p>DEF Enhance <small>Increase DEF by 70%</small></p>
@@ -45,9 +61,45 @@ export default class AdventureFarming extends Component {
                     </Tab>
                     <Tab eventKey={2} title="Tips">
                         <p>talk about legion skill</p>
+                        <p>talking about watching the fight to learn how they fight</p>
+                        <p>Once you have alot of partners you will have to learn how to use them depending on other's partners
+                            Because there isn't a combo that can't be counter and beated.
+                        </p>
                     </Tab>
                 </Tabs>
             </Grid> 
         )
     }
 }
+
+const CustomMedia = ({pos, term, definition, img}) => {
+    if(pos === "left")
+        return (
+            <Media>
+                <Media.Left>
+                    <img width={120} height={120} src={img} alt="buff/debuff" />
+                </Media.Left>
+                    <Media.Body align="middle">
+                    <Media.Heading>{term}</Media.Heading>
+                    <p>
+                        {definition}
+                    </p>
+                </Media.Body>
+            </Media>
+        )
+    else 
+        return (
+            <Media>
+                <Media.Body align="middle">
+                    <Media.Heading>{term}</Media.Heading>
+                    <p>
+                        {definition}
+                    </p>
+                </Media.Body>
+                <Media.Right>
+                    <img width={120} height={120} src={img} alt="buff/debuff" />
+                </Media.Right>
+            </Media>
+        )
+}
+
