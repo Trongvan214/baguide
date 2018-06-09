@@ -1,0 +1,23 @@
+/* .partners-buff {
+    width: 25%;
+    margin: auto;
+} */
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+.stats-info span {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.black {
+    color: black;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}

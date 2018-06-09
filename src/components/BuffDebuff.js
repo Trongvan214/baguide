@@ -1,157 +1,123 @@
 import React, { Component } from 'react'
 import { Col, Media, Image } from 'react-bootstrap';
+//default pic 
+import defaultPic from './img/default.JPG';
+//buff
 import attbuff from './img/attbuff.JPG';
 import defbuff from './img/defbuff.JPG';
 import speedbuff from './img/speedbuff.JPG';
 import critbuff from './img/critbuff.JPG';
 import enduringhealbuff from './img/enduringhealbuff.JPG';
-import immunitybuff from './img/immunitybuff';
+import immunitybuff from './img/immunitybuff.JPG';
 import shieldbuff from './img/shieldbuff.JPG';
 import Unyieldingbuff from './img/unyieldingbuff.JPG';
-
+//debuff
+import blinddebuff from './img/blinddebuff.JPG';
+import attdebuff from './img/attdebuff.JPG';
+import defdebuff from './img/defdebuff.JPG';
+import slowdebuff from './img/slowdebuff.JPG';
+import tauntdebuff from './img/tauntdebuff.JPG';
+import sleepdebuff from './img/sleepdebuff.JPG';
+import poisondebuff from './img/poisondebuff.JPG';
+import freezedebuff from './img/freezedebuff.JPG';
+import stundebuff from './img/stundebuff.JPG';
+import healforbdebuff from './img/healforbdebuff.JPG';
+import silencebebuff from './img/silencebebuff.JPG';
+import injurydebuff from './img/injurydebuff.JPG';
+import amnesiadebuff from './img/amnesiadebuff.JPG';
 
 export default class BuffDebuff extends Component { 
+    state = {
+        buffs: [],
+        debuffs: [],
+    }
+    componentDidMount(){
+        let buffs = [];
+        let debuffs = [];
+        //for buffs
+        buffs.push(["ATK Enhance", "ncrease ATK by 50%", attbuff]);
+        buffs.push(["DEF Enhance", "Increase DEF by 70%", defbuff]);
+        buffs.push(["Speed Enhance", "Increase Speed by 30%", speedbuff]);
+        buffs.push(["CR Rate Enhance", "Increase CR Rate by 30%", critbuff]);
+        buffs.push(["Enduring Healing", "Recover 15% of max HP in each round", enduringhealbuff]);
+        buffs.push(["Immunity", "Immune to any debuff (it won't dispel the debuffs which are taking effect)", immunitybuff]);
+        buffs.push(["Add Shield", "Add a shield which can absorb a certain amount of damage", shieldbuff]);
+        buffs.push(["Unyielding", "Unyielding will! HP just won't be lower than 1 when being attacked", Unyieldingbuff]);
+        buffs.push(["Damage Reflect", "Reflect 30% of received damage", defaultPic]);
+        buffs.push(["CR Res Enhance", "Reduce the chance of suffering CR by 50%", defaultPic]);
+        buffs.push(["Add Counter Blessing", "It can fight back with 75% ATK after being attacked", defaultPic]);
+        buffs.push(["Protection", "The target is protected by a teammate from any damage and the teammate takes 50% of the damage", defaultPic]);
+        buffs.push(["Nirvana", "Revive immediately to its 30% HP after being defeated", defaultPic]);
+        buffs.push(["Energy Shield", "Cast shields for the team", defaultPic]);
+        //for debuffs
+        debuffs.push(["Blind", "It has a 50% chance to deflect the hit, which will reduce 30% of the dealing damage", blinddebuff]);
+        debuffs.push(["ATK Reduce", "Reduce ATK by 50%", attdebuff]);
+        debuffs.push(["DEF Reduce", "Reduce DEF by 70%", defdebuff]);
+        debuffs.push(["Slow", "Reduce Speed by 30%", slowdebuff]);
+        debuffs.push(["Taunt", "Can only use the first skill to attack the taunter", tauntdebuff]);
+        debuffs.push(["Sleep", "Enter Sleep status, and cannot take actions until attacked", sleepdebuff]);
+        debuffs.push(["Poison", "Each round deal damage by 5% of the max HP.", poisondebuff]);
+        debuffs.push(["Frozen", "Enter Frozen status, and cannot take actions", freezedebuff]);
+        debuffs.push(["Stun", "Enter Stun status, and cannot take actions", stundebuff]);
+        debuffs.push(["Healing forbidden", "Can't recover HP", healforbdebuff]);
+        debuffs.push(["Silence", "Cannot use skills with CD", silencebebuff]);
+        debuffs.push(["Injury", "Receive additional damage by 25%", injurydebuff]);
+        debuffs.push(["Amnesia", "Cannot trigger the passive skill", amnesiadebuff]);
+        debuffs.push(["Inertia", "Cannot get buffs", defaultPic]);
+        debuffs.push(["Thor Curse", "After the countdown, deal damage (Ignoring DEF)", defaultPic]);
+        //set to the state
+        this.setState({buffs, debuffs});
+    }
     render(){
         return (
             <Col>
-                <h1>List of buffs</h1>
-                <div className="partners-buff">
-                    <CustomMedia 
-                        pos="left"
-                        term="ATK Enhance"
-                        definition="Increase ATK by 50%"
-                        img={attbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="DEF Enhance"
-                        definition="Increase DEF by 70%"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Speed Enhance"
-                        definition="Increase Speed by 30%"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="CR Rate Enhance"
-                        definition="Increase CR Rate by 30%"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="CR Res Enhance"
-                        definition="Reduce the chance of suffering CR by 50%"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Enduring Healing"
-                        definition="Recover 15% of max HP in each round"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Add Counter Blessing"
-                        definition="It can fight back with 75% ATK after being attacked"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Immunity"
-                        definition="Immune to any debuff (it won't dispel the debuffs which are taking effect)"
-                        img={defbuff}
-                    />                    
-                    <CustomMedia 
-                        pos="right"
-                        term="Damage Reflect"
-                        definition="Reflect 30% of received damage"
-                        img={defbuff}
-                    />                    
-                    <CustomMedia 
-                        pos="right"
-                        term="Add Shield"
-                        definition="Add a shield which can absorb a certain amount of damage"
-                        img={defbuff}
-                    />                    
-                    <CustomMedia 
-                        pos="right"
-                        term="Unyielding"
-                        definition="Unyielding will! HP just won't be lower than 1 when being attacked"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Protection"
-                        definition="The target is protected by a teammate from any damage and the teammate takes 50% of the damage"
-                        img={defbuff}
-                    />
-                    <CustomMedia 
-                        pos="right"
-                        term="Nirvana"
-                        definition="Revive immediately to its 30% HP after being defeated"
-                        img={defbuff}
-                    />                                        
-                    <CustomMedia 
-                        pos="right"
-                        term="Energy Shield"
-                        definition="Revive immediately to its 30% HP after being defeated"
-                        img={defbuff}
-                    />                    
-                </div>
+                <Col md={6} className="partners-buff">
+                    <h1>List of Buffs</h1>
+                    {
+                        this.state.buffs.map((buff, index) => (
+                            <CustomMedia 
+                                key={index}
+                                term={buff[0]}
+                                definition={buff[1]}
+                                img={buff[2]}
+                                withoutImg={buff[2] === null ? true : false}
+                            />
+                        ))
+                    }
+                </Col>
+                <Col md={6} className="partners-debuff">
+                    <h1>List of Debuffs</h1>
+                    {
+                        this.state.debuffs.map((buff, index) => (
+                            <CustomMedia 
+                                key={index}
+                                term={buff[0]}
+                                definition={buff[1]}
+                                img={buff[2]}
+                                withoutImg={buff[2] === null ? true : false}
+                            />
+                        ))
+                    }
+                </Col>
             </Col>
         )
     }
 }
 
-const CustomMedia = ({pos, term, definition, img}) => {
-    if(pos === "left")
-        return (
-            <Media>
+const CustomMedia = ({ term, definition, img, withoutImg}) => (
+    <Media>
+        {
+            !withoutImg ? (
                 <Media.Left>
-                    <img width={120} height={120} src={img} alt="buff/debuff" />
-                </Media.Left>
-                    <Media.Body align="middle">
-                    <Media.Heading>{term}</Media.Heading>
-                    <p>
-                        {definition}
-                    </p>
-                </Media.Body>
-            </Media>
-        )
-    else 
-        return (
-            <Media>
-                <Media.Body align="middle">
-                    <Media.Heading>{term}</Media.Heading>
-                    <p>
-                        {definition}
-                    </p>
-                </Media.Body>
-                <Media.Right>
                     <Image width={120} height={120} src={img} alt="buff/debuff" />
-                </Media.Right>
-            </Media>
-        )
-}
-
-                        // <div className="partners-debuff">
-                        //     <h1>Here are the list of debuffs you can get in the game</h1>
-                        //     <p>Blind: <small>It has a 50% chance to deflect the hit, which will reduce 30% of the dealing damage.</small></p>
-                        //     <p>ATKReduce: <small>Reduce ATK by 50%</small></p>
-                        //     <p>DEFReduce: <small>Reduce DEF by 70%</small></p>
-                        //     <p>Slow: <small>Reduce Speed by 30%</small></p>
-                        //     <p>Inertia: <small>Cannot get buffs</small></p>
-                        //     <p>ThorCurse: <small>After the countdown, deal damage (Ignoring DEF)</small></p>
-                        //     <p>Taunt: <small>Can only use the first skill to attack the taunter.</small></p>
-                        //     <p>Sleep: <small>Enter Sleep status, and cannot take actions until attacked.</small></p>
-                        //     <p>Poison: <small>Each round deal damage by 5% of the max HP.</small></p>
-                        //     <p>Frozen: <small>Enter Frozen status, and cannot take actions</small></p>
-                        //     <p>Stun: <small>Enter Stun status, and cannot take actions</small></p>
-                        //     <p>Healing F<small>orbidden: Can't recover HP</small></p>
-                        //     <p>Silence: <small>Cannot use skills with CD</small></p>
-                        //     <p>Injury: <small>Receive additional damage by 25%</small></p>
-                        //     <p>Amnesia: <small>Cannot trigger the passive skill</small></p>
-                        // </div>
+                </Media.Left>
+            ) : null
+        }
+            <Media.Body align="middle">
+            <Media.Heading>{term}</Media.Heading>
+            <p>
+                {definition}
+            </p>
+        </Media.Body>
+    </Media>
+)

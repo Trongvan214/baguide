@@ -1,39 +1,43 @@
 import React, { Component } from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
+import './css/PartnerStats.css';
 import allstats from './img/allstats.JPEG';
 import stats from './img/stats.JPG';
 
 export default class PartnerStats extends Component {
     render(){
         return (
-            <Row>
-                <Col mdOffset={2} md={3}>
-                    <Image src={allstats} responsive/>
-                </Col>
-                <Col>
-                    <div className="stats-info">
-                        <p><span>HP: </span>partner's health</p>
-                        <p><span>ATK: </span>partner's attack</p>
-                        <p><span>DEF: </span>partner's defense</p>
-                        <p><span>SPD: </span>partner's speed</p>
-                        <p><span>CR: </span>partner's critical rate</p>
-                        <p><span>CRD: </span>partner's critical damage</p>
-                        <p><span>RES: </span></p>
-                        <p><span>SPD: </span></p>
-                    </div>
-                </Col>
-                <p>
-                    Action bar and speed. When a character's Action Bar reaches the max progress,
-                    the character can take action. THe higher speed can bring faster action bar progress recovery. 
-                    When the battle starts, the partners with the highest speed can take  action first. It is important to take the initiative action
-                    before your opponents.    
-                </p>
-                <p>Skill Res and Skill Hit</p>
-                <p>The higher Skill hit you get, the higher chance you can inflect debuff on emeies. THe higher skill res you get, the less chance 
-                    you will suffer debuff.
-                </p>
-                <Image src={stats} />
-            </Row>
+            <React.Fragment>
+                <Row>
+                    <Col mdOffset={1} md={3}>
+                        <Image src={allstats} responsive/>
+                    </Col>
+                    <Col>
+                        <div className="stats-info">
+                            <p><span>HP (Health): </span>Health is how much damage it can take before dying</p>
+                            <p><span>ATK (Attack): </span>increase damange output</p>
+                            <p><span>DEF (Defense): </span>reduce damange taken</p>
+                            <p><span>SPD (Speed): </span>increase the action bar recovery (to attack again)</p>
+                            <p><span>CR (Critical Rate): </span>chance to do extra damange (base on CRD)</p>
+                            <p><span>CRD (Critial Damage): </span>extra % damange when land a critical hit (Exp: 100 damange and 50% crd = 150 damange if crit)</p>
+                            <p><span>RES (Resistance): </span>the higher RES you get, the less chance you will suffer debuffs</p>
+                            <p><span>HIT (Hit Rate): </span>The higher HIT you get, the higher chance you can inflict debuffs</p>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col mdOffset={1} md={5}>
+                        <Image src={stats} responsive/>
+                    </Col>
+                    <Col>
+                        <div className="stats-info">
+                            <p><span className="black">Basic Stats: </span>stats unique to each partner</p>
+                            <p><span className="red">Additional Stats: </span>stats from war patternst</p>
+                            <p><span className="blue">Overall Stats: </span>total from basic + additional stats (have to calc. yourself)</p>
+                        </div>
+                    </Col>
+                </Row>
+            </React.Fragment>
         )
     }
 }
