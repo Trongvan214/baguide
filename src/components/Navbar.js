@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import logo from './img/logo.jpg';
 
 export default class CustomNavbar extends Component {
     render(){
@@ -8,7 +9,9 @@ export default class CustomNavbar extends Component {
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/home">Brutal Age</Link>
+                        <Link to="/home">
+                            Brutal Age
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

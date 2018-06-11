@@ -8,8 +8,8 @@ export default class PartnerStats extends Component {
     render(){
         return (
             <React.Fragment>
-                <Row>
-                    <Col mdOffset={1} md={3}>
+                <Row className="vcenter">
+                    <Col md={2} className="margin">
                         <Image src={allstats} responsive/>
                     </Col>
                     <Col>
@@ -25,8 +25,8 @@ export default class PartnerStats extends Component {
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col mdOffset={1} md={5}>
+                <Row className="vcenter">
+                    <Col md={4} className="margin">
                         <Image src={stats} responsive/>
                     </Col>
                     <Col>

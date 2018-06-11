@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Col, Media, Image } from 'react-bootstrap';
+import { Grid, Row, Col, Media, Image } from 'react-bootstrap';
+import './BuffDebuff.css';
+
 //default pic 
 import defaultPic from './img/default.JPG';
 //buff
@@ -35,7 +37,7 @@ export default class BuffDebuff extends Component {
         let buffs = [];
         let debuffs = [];
         //for buffs
-        buffs.push(["ATK Enhance", "ncrease ATK by 50%", attbuff]);
+        buffs.push(["ATK Enhance", "Increase ATK by 50%", attbuff]);
         buffs.push(["DEF Enhance", "Increase DEF by 70%", defbuff]);
         buffs.push(["Speed Enhance", "Increase Speed by 30%", speedbuff]);
         buffs.push(["CR Rate Enhance", "Increase CR Rate by 30%", critbuff]);
@@ -70,42 +72,51 @@ export default class BuffDebuff extends Component {
     }
     render(){
         return (
-            <Col>
-                <Col md={6} className="partners-buff">
+            <Grid>
+                <Row>
                     <h1>List of Buffs</h1>
+                </Row>
+                <Row>
                     {
                         this.state.buffs.map((buff, index) => (
-                            <CustomMedia 
-                                key={index}
-                                term={buff[0]}
-                                definition={buff[1]}
-                                img={buff[2]}
-                                withoutImg={buff[2] === null ? true : false}
-                            />
+                            <Col md={4}>
+                                <CustomMedia 
+                                    key={index}
+                                    term={buff[0]}
+                                    definition={buff[1]}
+                                    img={buff[2]}
+                                    withoutImg={buff[2] === null ? true : false}
+                                />
+                            </Col>
                         ))
                     }
-                </Col>
-                <Col md={6} className="partners-debuff">
-                    <h1>List of Debuffs</h1>
+                </Row>
+                <Row>
+                    <h1>List of Debuffs</h1>                    
+                </Row>
+                <Row>
                     {
                         this.state.debuffs.map((buff, index) => (
-                            <CustomMedia 
-                                key={index}
-                                term={buff[0]}
-                                definition={buff[1]}
-                                img={buff[2]}
-                                withoutImg={buff[2] === null ? true : false}
-                            />
+                            <Col md={4}>
+                                <CustomMedia 
+                                    key={index}
+                                    term={buff[0]}
+                                    definition={buff[1]}
+                                    img={buff[2]}
+                                    withoutImg={buff[2] === null ? true : false}
+                                />
+                            </Col>
                         ))
                     }
-                </Col>
-            </Col>
+                </Row>
+               
+            </Grid>
         )
     }
 }
 
 const CustomMedia = ({ term, definition, img, withoutImg}) => (
-    <Media>
+    <Media className="bndb-media">
         {
             !withoutImg ? (
                 <Media.Left>
