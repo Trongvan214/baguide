@@ -4,3 +4,12 @@
 .bndb-media p {
     font-size: 0.9em;
 }
+.bndb-example p {
+    text-indent: 5%;
+    font-size: 1.3em;
+}
+.bndb-intro p {
+    margin: 15px 0;
+    text-indent: 5%;
+    line-height: 30px;
+}

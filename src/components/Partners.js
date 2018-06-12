@@ -9,7 +9,7 @@ export default class AdventureFarming extends Component {
     render(){
         return (
             <Grid className="partners-buffdebuff-info">
-                <Tabs defaultActiveKey={1} id="buffdebuff">
+                <Tabs defaultActiveKey={2} id="buffdebuff">
                     <Tab eventKey={1} title="Stats">
                         <PartnerStats />
                     </Tab>

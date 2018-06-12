@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col, Media, Image } from 'react-bootstrap';
+import { Grid, Row, Col, Media, Image, PageHeader } from 'react-bootstrap';
 import './BuffDebuff.css';
+
+import buffexample from './img/buffexample.JPG';
+import stackdebuff from './img/stackdebuff.JPG';
 
 //default pic 
 import defaultPic from './img/default.JPG';
@@ -13,6 +16,7 @@ import enduringhealbuff from './img/enduringhealbuff.JPG';
 import immunitybuff from './img/immunitybuff.JPG';
 import shieldbuff from './img/shieldbuff.JPG';
 import Unyieldingbuff from './img/unyieldingbuff.JPG';
+import critresisbuff from './img/critresisbuff.JPG';
 //debuff
 import blinddebuff from './img/blinddebuff.JPG';
 import attdebuff from './img/attdebuff.JPG';
@@ -24,7 +28,7 @@ import poisondebuff from './img/poisondebuff.JPG';
 import freezedebuff from './img/freezedebuff.JPG';
 import stundebuff from './img/stundebuff.JPG';
 import healforbdebuff from './img/healforbdebuff.JPG';
-import silencebebuff from './img/silencebebuff.JPG';
+import silencebebuff from './img/silencedebuff.JPG';
 import injurydebuff from './img/injurydebuff.JPG';
 import amnesiadebuff from './img/amnesiadebuff.JPG';
 
@@ -46,7 +50,7 @@ export default class BuffDebuff extends Component {
         buffs.push(["Add Shield", "Add a shield which can absorb a certain amount of damage", shieldbuff]);
         buffs.push(["Unyielding", "Unyielding will! HP just won't be lower than 1 when being attacked", Unyieldingbuff]);
         buffs.push(["Damage Reflect", "Reflect 30% of received damage", defaultPic]);
-        buffs.push(["CR Res Enhance", "Reduce the chance of suffering CR by 50%", defaultPic]);
+        buffs.push(["CR Res Enhance", "Reduce the chance of suffering CR by 50%", critresisbuff]);
         buffs.push(["Add Counter Blessing", "It can fight back with 75% ATK after being attacked", defaultPic]);
         buffs.push(["Protection", "The target is protected by a teammate from any damage and the teammate takes 50% of the damage", defaultPic]);
         buffs.push(["Nirvana", "Revive immediately to its 30% HP after being defeated", defaultPic]);
@@ -72,9 +76,48 @@ export default class BuffDebuff extends Component {
     }
     render(){
         return (
-            <Grid>
+            <Grid className="bndb">
+                <Row className="bndb-intro">
+                    <p> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
+                        Buffs and debuffs are advantages and disadvantages that can happen to partners during a battle.
+                        Below you will find a list of buffs and debuffs in the game.
+                        The blue color is the buff, which give you an advantage during the fight.  
+                        The red is the debuff, which give will give you a disadvantage in the fight.
+                    </p>
+                    <p>
+                        These buffs/debuffs are time limited, at the bottom right you will see a number,
+                        it represent the numbers of rounds it will last. 
+                        One round is past after the partner uses it's turn. 
+                        So this means, the time will depends on the spd (stats) of the partners. 
+                        Faster spd partners will have the buff on for shorter amount of time, and slower partners will have it for longer.
+                        This isn't a bad thing, I will discuss more about this in the battling section.
+                    </p>
+                </Row>
                 <Row>
-                    <h1>List of Buffs</h1>
+                    <Col md={5}>
+                        <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
+                            The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
+                        </p>
+                    </Col>
+                    <Col md={5}>
+                        <Image src={stackdebuff} responsive />
+                    </Col>
+                </Row>
+                <Row className="vcenter bndb-example">
+                    <Col md={3}>
+                        <Image src={buffexample} responsive/>
+                    </Col>
+                    <Col md={7}>
+                        <p>For example, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
+                            ,and it got a def buff, which increases it's def by 70% (scroll down to see the buff). It should now have 1000 + (1000 * .7) = 1700 def.
+                            And you see the number 2 on the bottom right of the buff saying 2, which means it will last for 2 rounds.
+                        </p>
+                    </Col>
+                </Row>
+                <Row>
+                    <PageHeader>
+                        List of Buffs
+                    </PageHeader>
                 </Row>
                 <Row>
                     {
@@ -91,9 +134,9 @@ export default class BuffDebuff extends Component {
                         ))
                     }
                 </Row>
-                <Row>
-                    <h1>List of Debuffs</h1>                    
-                </Row>
+                <PageHeader>
+                    List of Debuffs
+                </PageHeader>
                 <Row>
                     {
                         this.state.debuffs.map((buff, index) => (
