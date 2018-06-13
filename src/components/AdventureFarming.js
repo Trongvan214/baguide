@@ -143,9 +143,6 @@ export default class AdventureFarming extends Component {
                             </p>
                         </Row>
                     </Tab>
-                    <Tab eventKey={5} title="Tips">
-                    Tab 4 content
-                    </Tab>
                 </Tabs>
             </Grid>           
         )

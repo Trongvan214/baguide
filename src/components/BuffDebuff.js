@@ -31,6 +31,7 @@ import healforbdebuff from './img/healforbdebuff.JPG';
 import silencebebuff from './img/silencedebuff.JPG';
 import injurydebuff from './img/injurydebuff.JPG';
 import amnesiadebuff from './img/amnesiadebuff.JPG';
+import inertiadebuff from './img/inertiadebuff.JPG';
 
 export default class BuffDebuff extends Component { 
     state = {
@@ -69,7 +70,7 @@ export default class BuffDebuff extends Component {
         debuffs.push(["Silence", "Cannot use skills with CD", silencebebuff]);
         debuffs.push(["Injury", "Receive additional damage by 25%", injurydebuff]);
         debuffs.push(["Amnesia", "Cannot trigger the passive skill", amnesiadebuff]);
-        debuffs.push(["Inertia", "Cannot get buffs", defaultPic]);
+        debuffs.push(["Inertia", "Cannot get buffs", inertiadebuff]);
         debuffs.push(["Thor Curse", "After the countdown, deal damage (Ignoring DEF)", defaultPic]);
         //set to the state
         this.setState({buffs, debuffs});
@@ -94,29 +95,37 @@ export default class BuffDebuff extends Component {
                     </p>
                 </Row>
                 <Row className="bndb-example">
-                    <Media>
-                        <Media.Body align="middle">
-                            <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
+                    <Col md={10}
+                        sm={8}
+                        xs={12}
+                    >
+                        <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
                                 The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
-                            </p>
-                        </Media.Body>
-                        <Media.Right>
-                            <Image width={128} height={128} src={stackdebuff} alt="stackbuff"/>
-                        </Media.Right>
-                    </Media>
+                        </p>
+                    </Col>
+                    <Col md={2}
+                         sm={4}
+                        xs={12}
+                    >
+                        <Image src={stackdebuff} alt="stackbuff"/>
+                    </Col>
                 </Row>
                 <Row className="bndb-example">
-                    <Media>
-                        <Media.Left>
-                            <Image width={128} height={128} src={buffexample} alt="stackbuff"/>
-                        </Media.Left>
-                        <Media.Body align="middle">
-                            <p>Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
+                    <Col md={2}
+                         sm={4}
+                        xs={12}
+                    >
+                        <Image src={buffexample} alt="stackbuff" responsive/>
+                    </Col>
+                    <Col md={10}
+                        sm={8}
+                        xs={12}
+                    >
+                        <p>Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
                                 ,and it got a def buff, which increases it's def by 70% (scroll down to see the buffs info.). It should now have 1000 + (1000 * .7) = 1700 def.
                                 From the bottom right, you can see this buff will last for 2 rounds (2 turns). The same applies to debuffs.
-                            </p>
-                        </Media.Body>
-                    </Media>
+                        </p>
+                    </Col>
                 </Row>
                 <Row>
                     <PageHeader>

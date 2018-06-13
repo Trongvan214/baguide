@@ -10,7 +10,7 @@ export default class Home extends Component {
                         Brutal Age Guide
                     </PageHeader>
                     <p className="indent">Hi, I'm Paper and I am from server 283 Juno. I have been playing this game for 4 months and I have learned alot.
-                        Don't be fool by the time, I pays very close attention to details, 
+                        Don't be fool by the time, I pay very close attention to details, 
                         so you'll be surprise how much I've learned in 4 months. 
                         I made this guide to share with people what I have learned, and improve their BA journey.
                         I will be talking about some of the stragigies I use when doing adventure,

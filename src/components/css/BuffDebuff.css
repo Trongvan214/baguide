@@ -7,12 +7,35 @@
 .bndb-example p {
     text-indent: 5%;
 }
-.bndb-example .media {
-    width: 80%;
-    margin: 20px auto;
+.bndb-example {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 .bndb-intro p {
     margin: 15px 0;
     text-indent: 5%;
     line-height: 30px;
 }
+
+@media screen and (max-width: 425px) {
+    .bndb-media {
+        margin: 5% 0;
+    }
+    .bndb-example {
+        width: 100%;
+        margin: auto;
+        display: table;
+        padding: 0;
+    }
+    .bndb-example img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .bndb-example p {
+        font-size: 1.1em;
+        line-height: 30px;
+    }
+} 

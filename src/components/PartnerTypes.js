@@ -52,15 +52,15 @@ export default class PartnerTypes extends Component {
                         </Media>
                     </Col>
                 </Row>
-                <p>When partners battling, 2 things can happen when it attacks or receive an attack.</p>
-                <p>1. Deflection: reduce incoming damage by 30% and immune to any debuff</p>
+                <p className="indent">When partners battling, 2 things can happen when it attacks or receive an attack.</p>
+                <p>1. <span className="bold">Deflection</span>: reduce incoming damage by 30% and immune to any debuff</p>
                 <div className="indent">
                     <p>
                         Exp: If 2 partners of different types are fighting (Brave and Wild), the stronger type of the 2 (Brave) 
                         will have a higher chance to trigger deflection when it's being hit by the weaker type (Wild).
                     </p>
                 </div>
-                <p>2. Bash: do 30% more damage</p>
+                <p>2. <span className="bold">Bash</span>: do 30% more damage</p>
                 <div className="indent">
                     <p>
                         Exp: If 2 partners of different types that are fighting (Wild and Wise), only the stronger types (Wild) 

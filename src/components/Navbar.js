@@ -29,6 +29,11 @@ export default class CustomNavbar extends Component {
                             Partners
                         </NavItem>
                     </Nav>
+                    <Nav pullRight>
+                        <NavItem eventKey={5} href="/baguide/about">
+                            About me
+                        </NavItem>
+                    </Nav>
                 </Navbar.Collapse>
             </Navbar>
         )
