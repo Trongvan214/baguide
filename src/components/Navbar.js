@@ -8,7 +8,7 @@ export default class CustomNavbar extends Component {
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/home">
+                        <Link to="/">
                             Brutal Age
                         </Link>
                     </Navbar.Brand>
@@ -16,7 +16,7 @@ export default class CustomNavbar extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="/baguide/home">
+                        <NavItem eventKey={1} href="/baguide/">
                             Home
                         </NavItem>
                         <NavItem eventKey={2} href="/baguide/adventure">
@@ -27,11 +27,6 @@ export default class CustomNavbar extends Component {
                         </NavItem>
                         <NavItem eventKey={4} href="/baguide/partners">
                             Partners
-                        </NavItem>
-                    </Nav>
-                    <Nav pullRight>
-                        <NavItem eventKey={5} href="/baguide/about">
-                            About me
                         </NavItem>
                     </Nav>
                 </Navbar.Collapse>
