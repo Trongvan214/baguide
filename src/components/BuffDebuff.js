@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col, Media, Image, PageHeader } from 'react-bootstrap';
-import './BuffDebuff.css';
+import './css/BuffDebuff.css';
 
 import buffexample from './img/buffexample.JPG';
 import stackdebuff from './img/stackdebuff.JPG';
@@ -88,31 +88,35 @@ export default class BuffDebuff extends Component {
                         These buffs/debuffs are time limited, at the bottom right you will see a number,
                         it represent the numbers of rounds it will last. 
                         One round is past after the partner uses it's turn. 
-                        So this means, the time will depends on the spd (stats) of the partners. 
+                        So this means, the duration of the buff will depends on the spd (stats) of the partners. 
                         Faster spd partners will have the buff on for shorter amount of time, and slower partners will have it for longer.
-                        This isn't a bad thing, I will discuss more about this in the battling section.
+                        This isn't a bad thing, I will discuss why in battling.
                     </p>
                 </Row>
-                <Row>
-                    <Col md={5}>
-                        <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
-                            The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
-                        </p>
-                    </Col>
-                    <Col md={5}>
-                        <Image src={stackdebuff} responsive />
-                    </Col>
+                <Row className="bndb-example">
+                    <Media>
+                        <Media.Body align="middle">
+                            <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
+                                The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
+                            </p>
+                        </Media.Body>
+                        <Media.Right>
+                            <Image width={128} height={128} src={stackdebuff} alt="stackbuff"/>
+                        </Media.Right>
+                    </Media>
                 </Row>
-                <Row className="vcenter bndb-example">
-                    <Col md={3}>
-                        <Image src={buffexample} responsive/>
-                    </Col>
-                    <Col md={7}>
-                        <p>For example, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
-                            ,and it got a def buff, which increases it's def by 70% (scroll down to see the buff). It should now have 1000 + (1000 * .7) = 1700 def.
-                            And you see the number 2 on the bottom right of the buff saying 2, which means it will last for 2 rounds.
-                        </p>
-                    </Col>
+                <Row className="bndb-example">
+                    <Media>
+                        <Media.Left>
+                            <Image width={128} height={128} src={buffexample} alt="stackbuff"/>
+                        </Media.Left>
+                        <Media.Body align="middle">
+                            <p>Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
+                                ,and it got a def buff, which increases it's def by 70% (scroll down to see the buffs info.). It should now have 1000 + (1000 * .7) = 1700 def.
+                                From the bottom right, you can see this buff will last for 2 rounds (2 turns). The same applies to debuffs.
+                            </p>
+                        </Media.Body>
+                    </Media>
                 </Row>
                 <Row>
                     <PageHeader>

@@ -6,7 +6,10 @@
 }
 .bndb-example p {
     text-indent: 5%;
-    font-size: 1.3em;
+}
+.bndb-example .media {
+    width: 80%;
+    margin: 20px auto;
 }
 .bndb-intro p {
     margin: 15px 0;
