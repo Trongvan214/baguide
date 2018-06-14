@@ -52,7 +52,7 @@ export default class PartnerTypes extends Component {
                         </Media>
                     </Col>
                 </Row>
-                <p className="indent">When partners battling, 2 things can happen when it attacks or receive an attack.</p>
+                <p>When partners battling, 2 things can happen when it attacks or receive an attack.</p>
                 <p>1. <span className="bold">Deflection</span>: reduce incoming damage by 30% and immune to any debuff</p>
                 <div className="indent">
                     <p>

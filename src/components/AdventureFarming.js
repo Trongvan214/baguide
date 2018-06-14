@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, Row, PageHeader, Col, Table, Tabs, Tab } from 'react-bootstrap';
+import { Grid, Row, PageHeader, Col, Table, Tabs, Tab, Image } from 'react-bootstrap';
 import './css/AdventureFarming.css';
+import map from './img/map.PNG';
 
 export default class AdventureFarming extends Component {
     state = {
@@ -29,41 +30,46 @@ export default class AdventureFarming extends Component {
             <Grid>
                 <Tabs defaultActiveKey={1} id="adventurefarming">
                     <Tab eventKey={1} title="Introduction">
-                        <Col className="af-intro" md={5}>
-                            <PageHeader>
-                                Adventure Farming
-                            </PageHeader>
-                            <span>Before we start, I would to say this isn't a beginner's guide, 
-                                I expect you guys to have some knowledge about partners, patterns.
-                                Below you will find some of the strategies I use when doing adventure.
-                            </span>
-                        </Col>
-                        <Col className="af-table" md={7}>
-                            <h1>Last stage on Purgatory statistic</h1>
-                            <Table responsive>
-                                <thead>
-                                    <tr>
-                                        {
-                                            headingInfo.map(v => (
-                                                <th key={v}>{v}</th>
-                                            ))
-                                        }
-                                    </tr>
-                                </thead>
-                                <tbody>
+                        <PageHeader>
+                            Adventure Farming
+                        </PageHeader>
+                        <Row className="af-row">
+                            <Col md={8}> 
+                                <p className="indent">
+                                    Before we start, I would to say this isn't a beginner's guide on adventure, 
+                                    you will need a basic understand of adventure to fully understand. 
+                                    I will be talking about some of the strategies that I used to farm in adventure. 
+                                    I will also provide some tips on what's the most efficient way.
+                                </p>
+                            </Col>
+                            <Col md={3}>
+                                <Image src={map} responsive/>
+                            </Col>
+                        </Row>
+                        <h1>Last stage on Purgatory statistic</h1>
+                        <Table responsive>
+                            <thead>
+                                <tr>
                                     {
-                                        islandInfo.map(island => (
-                                            <tr key={island.islandName}>
-                                                <td>{island.islandName}</td>
-                                                <td>{island.exp}</td>
-                                                <td>{island.souls}</td>
-                                                <td>{island.selling}</td>
-                                            </tr>
+                                        headingInfo.map(v => (
+                                            <th key={v}>{v}</th>
                                         ))
                                     }
-                                </tbody>
-                            </Table>
-                        </Col>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    islandInfo.map(island => (
+                                        <tr key={island.islandName}>
+                                            <td>{island.islandName}</td>
+                                            <td>{island.exp}</td>
+                                            <td>{island.souls}</td>
+                                            <td>{island.selling}</td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
                     </Tab>
                     <Tab eventKey={2} title="Patterns">
                         <Row className="af-box">

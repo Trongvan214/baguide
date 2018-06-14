@@ -78,14 +78,14 @@ export default class BuffDebuff extends Component {
     render(){
         return (
             <Grid className="bndb">
-                <Row className="bndb-intro">
-                    <p> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
+                <Row className="bndb-row">
+                    <p className="indent"> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
                         Buffs and debuffs are advantages and disadvantages that can happen to partners during a battle.
                         Below you will find a list of buffs and debuffs in the game.
                         The blue color is the buff, which give you an advantage during the fight.  
                         The red is the debuff, which give will give you a disadvantage in the fight.
                     </p>
-                    <p>
+                    <p className="indent">
                         These buffs/debuffs are time limited, at the bottom right you will see a number,
                         it represent the numbers of rounds it will last. 
                         One round is past after the partner uses it's turn. 
@@ -99,7 +99,7 @@ export default class BuffDebuff extends Component {
                         sm={8}
                         xs={12}
                     >
-                        <p>Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
+                        <p className="indent">Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
                                 The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
                         </p>
                     </Col>
@@ -121,13 +121,13 @@ export default class BuffDebuff extends Component {
                         sm={8}
                         xs={12}
                     >
-                        <p>Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
+                        <p className="indent">Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
                                 ,and it got a def buff, which increases it's def by 70% (scroll down to see the buffs info.). It should now have 1000 + (1000 * .7) = 1700 def.
                                 From the bottom right, you can see this buff will last for 2 rounds (2 turns). The same applies to debuffs.
                         </p>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="bndb-row">
                     <PageHeader>
                         List of Buffs
                     </PageHeader>

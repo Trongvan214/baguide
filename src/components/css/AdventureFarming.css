@@ -2,6 +2,9 @@
     text-indent: 5%;
     font-size: 1.3em;
 }
+.af-row {
+    margin: 20px 0;
+}
 .af-table h1 {
     text-align: center;
     font-size: 1.7em;

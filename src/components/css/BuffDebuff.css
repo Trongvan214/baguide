@@ -1,22 +1,22 @@
+.bndb-row {
+    margin-top: 20px;
+} 
+.bndb-row p {
+    margin: 15px 0;
+    text-indent: 5%;
+    line-height: 30px;
+}
 .bndb-media {
     margin: 3%;
 }
 .bndb-media p {
     font-size: 0.9em;
 }
-.bndb-example p {
-    text-indent: 5%;
-}
 .bndb-example {
     width: 90%;
     margin: 0 auto;
     display: flex;
     align-items: center;
-}
-.bndb-intro p {
-    margin: 15px 0;
-    text-indent: 5%;
-    line-height: 30px;
 }
 
 @media screen and (max-width: 425px) {
