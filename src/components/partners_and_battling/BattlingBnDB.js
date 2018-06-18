@@ -1,39 +1,40 @@
 import React, { Component } from 'react'
 import { Grid, Row, Col, Media, Image, PageHeader } from 'react-bootstrap';
-import './css/BuffDebuff.css';
+import { Link } from 'react-router-dom';
+import './BattlingBnDB.css';
 
-import buffexample from './img/buffexample.JPG';
-import stackdebuff from './img/stackdebuff.JPG';
+import buffexample from '../img/buffexample.JPG';
+import stackdebuff from '../img/stackdebuff.JPG';
 
 //default pic 
-import defaultPic from './img/default.JPG';
+import defaultPic from '../img/default.JPG';
 //buff
-import attbuff from './img/attbuff.JPG';
-import defbuff from './img/defbuff.JPG';
-import speedbuff from './img/speedbuff.JPG';
-import critbuff from './img/critbuff.JPG';
-import enduringhealbuff from './img/enduringhealbuff.JPG';
-import immunitybuff from './img/immunitybuff.JPG';
-import shieldbuff from './img/shieldbuff.JPG';
-import Unyieldingbuff from './img/unyieldingbuff.JPG';
-import critresisbuff from './img/critresisbuff.JPG';
+import attbuff from '../img/attbuff.JPG';
+import defbuff from '../img/defbuff.JPG';
+import speedbuff from '../img/speedbuff.JPG';
+import critbuff from '../img/critbuff.JPG';
+import enduringhealbuff from '../img/enduringhealbuff.JPG';
+import immunitybuff from '../img/immunitybuff.JPG';
+import shieldbuff from '../img/shieldbuff.JPG';
+import Unyieldingbuff from '../img/unyieldingbuff.JPG';
+import critresisbuff from '../img/critresisbuff.JPG';
 //debuff
-import blinddebuff from './img/blinddebuff.JPG';
-import attdebuff from './img/attdebuff.JPG';
-import defdebuff from './img/defdebuff.JPG';
-import slowdebuff from './img/slowdebuff.JPG';
-import tauntdebuff from './img/tauntdebuff.JPG';
-import sleepdebuff from './img/sleepdebuff.JPG';
-import poisondebuff from './img/poisondebuff.JPG';
-import freezedebuff from './img/freezedebuff.JPG';
-import stundebuff from './img/stundebuff.JPG';
-import healforbdebuff from './img/healforbdebuff.JPG';
-import silencebebuff from './img/silencedebuff.JPG';
-import injurydebuff from './img/injurydebuff.JPG';
-import amnesiadebuff from './img/amnesiadebuff.JPG';
-import inertiadebuff from './img/inertiadebuff.JPG';
+import blinddebuff from '../img/blinddebuff.JPG';
+import attdebuff from '../img/attdebuff.JPG';
+import defdebuff from '../img/defdebuff.JPG';
+import slowdebuff from '../img/slowdebuff.JPG';
+import tauntdebuff from '../img/tauntdebuff.JPG';
+import sleepdebuff from '../img/sleepdebuff.JPG';
+import poisondebuff from '../img/poisondebuff.JPG';
+import freezedebuff from '../img/freezedebuff.JPG';
+import stundebuff from '../img/stundebuff.JPG';
+import healforbdebuff from '../img/healforbdebuff.JPG';
+import silencebebuff from '../img/silencedebuff.JPG';
+import injurydebuff from '../img/injurydebuff.JPG';
+import amnesiadebuff from '../img/amnesiadebuff.JPG';
+import inertiadebuff from '../img/inertiadebuff.JPG';
 
-export default class BuffDebuff extends Component { 
+export default class BattlingBnDB extends Component { 
     state = {
         buffs: [],
         debuffs: [],
@@ -78,6 +79,9 @@ export default class BuffDebuff extends Component {
     render(){
         return (
             <Grid className="bndb">
+                <PageHeader>
+                    Buffs and Debuffs
+                </PageHeader>
                 <Row className="bndb-row">
                     <p className="indent"> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
                         Buffs and debuffs are advantages and disadvantages that can happen to partners during a battle.
@@ -125,19 +129,20 @@ export default class BuffDebuff extends Component {
                                 ,and it got a def buff, which increases it's def by 70% (scroll down to see the buffs info.). It should now have 1000 + (1000 * .7) = 1700 def.
                                 From the bottom right, you can see this buff will last for 2 rounds (2 turns). The same applies to debuffs.
                         </p>
+                        <p className="bold">MOST BUFF INCREASES 
+                            <Link to="/partners/info"> OVERALL STATS! </Link>
+                            (learned through testing)
+                        </p>
                     </Col>
                 </Row>
                 <Row className="bndb-row">
-                    <PageHeader>
-                        List of Buffs
-                    </PageHeader>
+                    <h1>List of Buffs</h1>
                 </Row>
                 <Row>
                     {
                         this.state.buffs.map((buff, index) => (
-                            <Col md={4}>
+                            <Col md={4} key={index}>
                                 <CustomMedia 
-                                    key={index}
                                     term={buff[0]}
                                     definition={buff[1]}
                                     img={buff[2]}
@@ -147,15 +152,14 @@ export default class BuffDebuff extends Component {
                         ))
                     }
                 </Row>
-                <PageHeader>
-                    List of Debuffs
-                </PageHeader>
+                <Row className="bndb-row">
+                    <h1>List of Debuffs</h1>
+                </Row>
                 <Row>
                     {
                         this.state.debuffs.map((buff, index) => (
-                            <Col md={4}>
+                            <Col md={4} key={index}>
                                 <CustomMedia 
-                                    key={index}
                                     term={buff[0]}
                                     definition={buff[1]}
                                     img={buff[2]}

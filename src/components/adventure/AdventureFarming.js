@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, PageHeader, Col, Table, Tabs, Tab, Image } from 'react-bootstrap';
-import './css/AdventureFarming.css';
-import map from './img/map.PNG';
+import './AdventureFarming.css';
+import map from '../img/map.PNG';
 
 export default class AdventureFarming extends Component {
     state = {

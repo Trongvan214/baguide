@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Image, PageHeader } from 'react-bootstrap';
-import './css/PartnerStats.css';
-import allstats from './img/allstats.JPEG';
-import stats from './img/stats.JPG';
+import './PartnerStats.css';
+import allstats from '../img/allstats.JPEG';
+import stats from '../img/stats.JPG';
 
 export default class PartnerStats extends Component {
     render(){
@@ -39,6 +39,12 @@ export default class PartnerStats extends Component {
                             <p><span className="blue">Overall Stats: </span>total of basic + additional stats (have to calc. yourself)</p>
                         </div>
                     </Col>
+                </Row>
+                <Row>
+                    <p>Every partners will have these stats above and it helps us determine the roles the play in battling</p>
+                    <p>Partners will higher ATK basic stats will often plays as a damage dealer, and so on. 
+                        But this isn't the only factor needed to determine their roles. There's also skills.
+                    </p>
                 </Row>
             </Grid>
         )

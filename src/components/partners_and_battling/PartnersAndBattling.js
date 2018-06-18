@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import { Grid, Tab, Tabs } from 'react-bootstrap';
-import PartnerTypes from './PartnerTypes';
+import PartnerAttributes from './PartnerAttributes';
 import PartnerStats from './PartnerStats';
-import BuffDebuff from './BuffDebuff';
-import './css/Partners.css';
+import BattlingBnDB from './BattlingBnDB';
 
-export default class AdventureFarming extends Component {
+export default class Battling extends Component {
+    state = {
+        key: "battling",
+    }
+    componentWillMount(){
+        let key = this.props.match.params.section;
+        if(key){
+            this.setState({key});
+        }
+    }
+    handleSelect = (key) => {
+        this.setState({key});
+    }
     render(){
         return (
             <Grid className="partners-buffdebuff-info">
-                <Tabs defaultActiveKey={2} id="buffdebuff">
-                    <Tab eventKey={1} title="Info">
-                        <PartnerTypes />
+                <Tabs activeKey={this.state.key} onSelect={this.handleSelect} id="buffdebuff">
+                    <Tab eventKey={"Partner"} title="Partner">
                         <PartnerStats />
+                        <PartnerAttributes />
                     </Tab>
-                    <Tab eventKey={2} title="Buffs/Debuffs">
-                        <BuffDebuff />
-                    </Tab>
-                    <Tab eventKey={3} title="Tips">
+                    <Tab eventKey={"battling"} title="Battling">
+                        <BattlingBnDB />
                         <p>talk about legion skill</p>
                         <p>talking about watching the fight to learn how they fight</p>
                         <p>Once you have alot of partners you will have to learn how to use them depending on other's partners

@@ -1,7 +1,9 @@
 .display-partners-type p{
     font-size: 0.9em;
 }
-
+.pt-row {
+    margin: 10px 0;
+}
 @media screen and (max-width: 425px) {
     .display-partners-type .media {
         margin: 10px 0;

@@ -1,11 +1,12 @@
-.bndb-row {
-    margin-top: 20px;
-} 
+
 .bndb-row p {
     margin: 15px 0;
     text-indent: 5%;
     line-height: 30px;
 }
+.bndb-row {
+    margin-top: 20px;
+} 
 .bndb-media {
     margin: 3%;
 }
@@ -17,6 +18,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    line-height: 30px;
 }
 
 @media screen and (max-width: 425px) {
