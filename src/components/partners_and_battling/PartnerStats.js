@@ -40,13 +40,14 @@ export default class PartnerStats extends Component {
                         </div>
                     </Col>
                 </Row>
-                <Row>
-                    <p>Every partners will have these stats above and it helps us determine the roles the play in battling</p>
-                    <p>Partners will higher ATK basic stats will often plays as a damage dealer, and so on. 
-                        But this isn't the only factor needed to determine their roles. There's also skills.
-                    </p>
-                </Row>
             </Grid>
         )
     }
 }
+
+// <Row>
+//     <p>Every partners will have these stats above and it helps us determine the roles the play in battling</p>
+//     <p>Partners will higher ATK basic stats will often plays as a damage dealer, and so on. 
+//         But this isn't the only factor needed to determine their roles. There's also skills.
+//     </p>
+// </Row>
