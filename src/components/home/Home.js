@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Grid, PageHeader, Jumbotron } from 'react-bootstrap';
+import { Grid, PageHeader, Jumbotron, Image, Row, Col } from 'react-bootstrap';
+import ios from '../img/iosdownload.png';
+import android from '../img/androiddownload.svg';
 
 export default class Home extends Component {
     render(){
@@ -24,6 +26,18 @@ export default class Home extends Component {
                     </p>
                     <p className="indent">If you have any question, you can contact me via LINE, my LINE ID is "pyroblazer134". Enjoy!</p>
                 </Jumbotron>
+                <Row>
+                    <Col md={6}>
+                        <a href="https://itunes.apple.com/us/app/brutal-age-horde-invasion/id1156787368?mt=8" rel="noopener noreferrer" target="_blank"> 
+                            <Image src={ios} responsive />
+                        </a>
+                    </Col>
+                    <Col md={6}>
+                        <a href="https://play.google.com/store/apps/details?id=com.tap4fun.brutalage_test&hl=en_US" rel="noopener noreferrer" target="_blank"> 
+                            <Image src={android} responsive />
+                        </a>
+                    </Col>
+                </Row>
             </Grid>
         )
     }

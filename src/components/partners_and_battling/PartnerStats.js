@@ -7,15 +7,21 @@ import stats from '../img/stats.JPG';
 export default class PartnerStats extends Component {
     render(){
         return (
-            <Grid className="ps">
+            <Grid className="pss">
                 <PageHeader>
                     Partner's Stats
                 </PageHeader>
-                <Row className="vcenter">
-                    <Col md={2} className="margin">
+                <Row className="vcenter pss-row">
+                    <Col md={2}
+                        sm={5}
+                        xs={12}
+                    >
                         <Image src={allstats} responsive/>
                     </Col>
-                    <Col>
+                    <Col md={10}
+                        sm={7}
+                        xs={12}
+                    >
                         <div className="stats-info">
                             <p><span>HP (Health): </span>Health is how much damage it can take before dying</p>
                             <p><span>ATK (Attack): </span>increase damage output</p>
@@ -28,11 +34,11 @@ export default class PartnerStats extends Component {
                         </div>
                     </Col>
                 </Row>
-                <Row className="vcenter">
-                    <Col md={4} className="margin">
+                <Row className="vcenter pss-row">
+                    <Col md={4}>
                         <Image src={stats} responsive/>
                     </Col>
-                    <Col>
+                    <Col md={8}>
                         <div className="stats-info">
                             <p><span className="black">Basic Stats: </span>stats unique to each partner</p>
                             <p><span className="red">Additional Stats: </span>stats from war patterns</p>

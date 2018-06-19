@@ -54,7 +54,7 @@ export default class PartnerTypes extends Component {
                         </Media>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="pt-row">
                     <p>I will talk later about why the attribute of the partners are important in battling</p>
                 </Row>
             </Grid>

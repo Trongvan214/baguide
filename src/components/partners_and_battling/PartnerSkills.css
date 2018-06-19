@@ -1,4 +1,15 @@
 .ps-row {
-    width: 80%;
-    margin: 15px auto;
+    margin: 15px 0;
+}
+.ps-row h1 {
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 425px) {
+    .ps-row h1 { 
+        text-align: center;
+    }
+    .ps-row p {
+        text-align: center;
+    }
 }
