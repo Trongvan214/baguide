@@ -34,7 +34,10 @@
 .bold {
   font-weight: bold;
 }
-
+.italic {
+  font-style: italic;
+  font-size: 0.8em;
+}
 @media screen and (max-width: 425px){
   .vcenter {
     display: table;

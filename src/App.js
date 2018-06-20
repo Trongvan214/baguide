@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 import AdventureFarming from './components/adventure/AdventureFarming';
 import WarPatterns from './components/warpattern/WarPatterns';
 import Partners from './components/partners_and_battling/PartnersAndBattling';
+import About from './components/about/About';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/partners/:section" component={Partners} />
             <Route path="/partners" component={Partners} />
             <Route path="/patterns" component={WarPatterns} />
+            <Route path="/about" component={About} />
           </Switch>
         </React.Fragment>
       </Router>
