@@ -31,7 +31,7 @@ export default class CustomNavbar extends Component {
                     </Nav>
                     <Nav pullRight>
                         <NavItem eventKey={5} href="/baguide/about">
-                            About me
+                            About
                         </NavItem>
                     </Nav>
                 </Navbar.Collapse>
