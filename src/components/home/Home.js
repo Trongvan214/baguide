@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, PageHeader, Jumbotron, Image, Row, Col } from 'react-bootstrap';
+import { Grid, Jumbotron, Image, Row, Col } from 'react-bootstrap';
 import ios from '../img/iosdownload.png';
 import android from '../img/androiddownload.svg';
 import logo from '../img/logo.jpg';
@@ -22,7 +22,7 @@ export default class Home extends Component {
                             </Media.Body>
                         </Media>
                     </Row>
-                    <Row>
+                    <Row className="home-row">
                         <p className="indent">This is a guide on the partners aspect of the game.
                             Beware of some of the things that are going be said in this guide.
                             There are things that are collected directly from the game forum,

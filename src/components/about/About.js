@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Jumbotron, Button, Modal, FormControl, HelpBlock, FormGroup } from 'react-bootstrap';
+import { Grid, Jumbotron, Modal, FormControl, HelpBlock, FormGroup } from 'react-bootstrap';
+import './About.css';
 
 export default class About extends Component {
     state = {
@@ -35,11 +36,9 @@ export default class About extends Component {
                     </p>
                     <p className="indent">If you have any question, or any infomation to correct me on, feel free to contact me via LINE, my LINE ID is "pyroblazer134". Enjoy!</p>
                     <p className="indent">This whole website was coded and designed by myself on my free time, 
-                        if you would like to show some appreciation and donated, here's my:
+                        if you would like to show some appreciation and donated, here's my
+                        <span className="about-link" onClick={this.handleShow}> PayPal</span>
                     </p>
-                    <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
-                        PayPal
-                    </Button>
 
                     <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton></Modal.Header>
