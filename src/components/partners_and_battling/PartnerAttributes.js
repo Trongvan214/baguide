@@ -55,7 +55,30 @@ export default class PartnerTypes extends Component {
                     </Col>
                 </Row>
                 <Row className="pt-row">
-                    <p>I will talk later about why the attribute of the partners are important in battling</p>
+                    <p>*reminder do it later*</p>
+                </Row>
+                <Row className="pt-row">
+                    <p>When partners battling, 2 things can happen when it attacks or receive an attack.</p>
+                    <p>1. <span className="bold">Deflection</span>: reduce incoming damage by 30% and immune to any debuff</p>
+                    <div className="indent">
+                        <p>
+                            Exp: If 2 partners of different types are fighting (Brave and Wild), the stronger type of the 2 (Brave) 
+                            will have a higher chance to trigger deflection when it's being hit by the weaker type (Wild).
+                        </p>
+                    </div>
+                    <p>2. <span className="bold">Bash</span>: do 30% more damage</p>
+                    <div className="indent">
+                        <p>
+                            Exp: If 2 partners of different types that are fighting (Wild and Wise), only the stronger types (Wild) 
+                            have a chance to trigger a bash hit on the weaker types (Wise). 
+                            Weaker type won't be able to trigger a bash hit on it's stronger type.
+                        </p>
+                    </div>
+                    <p>
+                        So when battling, if you know ahead of time the type of the partners, 
+                        you can pick it's stronger type to improve your chance of winning
+                        There's alot more to this, that I'll explain later.
+                    </p>
                 </Row>
             </Grid>
         )
@@ -85,4 +108,4 @@ export default class PartnerTypes extends Component {
 //     you can pick it's stronger type to improve your chance of winning
 //     There's alot more to this, that I'll explain later.
 // </p>
-// </Row> */}
+// </Row>  */}

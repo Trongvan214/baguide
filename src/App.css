@@ -31,15 +31,24 @@
   margin: 30px 0;
 }
 
+.margin-top-2 {
+  margin-top: 20px;
+}
+
 .bold {
   font-weight: bold;
 }
+
 .italic {
   font-style: italic;
   font-size: 0.8em;
 }
+
 @media screen and (max-width: 425px){
   .vcenter {
     display: table;
+  }
+  .no-pad-col-425 {
+    padding: 0;
   }
 }

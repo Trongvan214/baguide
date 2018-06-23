@@ -2,7 +2,8 @@
     margin-bottom: 30px;
 }
 .pss-row {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .stats-info span {
     font-weight: bold;

@@ -9,7 +9,7 @@
     .ps-row h1 { 
         text-align: center;
     }
-    .ps-row p {
+    .ps-row .row p {
         text-align: center;
     }
 }

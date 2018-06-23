@@ -11,13 +11,13 @@ export default class PartnerSkills extends Component {
     render(){
         return (
             <Grid>
-                <Row className="vcenter">
-                    <PageHeader>
-                        Partner's Skills
-                    </PageHeader>
-                </Row>
+                <PageHeader>
+                    Partner's Skills
+                </PageHeader>
                 <Row>
-                    <p>There are 3 types of skills that a partner can acquired:</p>
+                    <Col md={12}>
+                        <p>There are 3 types of skills that a partner can acquired:</p>
+                    </Col>
                 </Row>
                 <Row className="ps-row">
                     <Col md={6}

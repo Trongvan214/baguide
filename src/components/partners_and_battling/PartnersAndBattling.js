@@ -29,11 +29,9 @@ export default class Battling extends Component {
                     </Tab>
                     <Tab eventKey={"battling"} title="Battling">
                         <BattlingBnDB />
-                        <p>talk about legion skill</p>
-                        <p>talking about watching the fight to learn how they fight</p>
-                        <p>Once you have alot of partners you will have to learn how to use them depending on other's partners
-                            Because there isn't a combo that can't be counter and beated.
-                        </p>
+                        <p>*reminder* talk about legion skill</p>
+                        <p>*reminder* talk about learning from watching the fight</p>
+                        <p>*reminder* talk about picking counter</p>
                     </Tab>
                 </Tabs>
             </Grid> 

@@ -4,23 +4,22 @@ import ios from '../img/iosdownload.png';
 import android from '../img/androiddownload.svg';
 import logo from '../img/logo.jpg';
 import './Home.css';
-import { Media } from 'react-bootstrap';
 
 export default class Home extends Component {
     render(){
         return (
             <Grid>
                 <Jumbotron>
-                    <Row className="home-row">
-                        <Media className="header">
-                            <Media.Left>
-                                <Image src={logo} width={150}/>
-                            </Media.Left>
-                            <Media.Body align="middle">
+                    <Row className="home-row vcenter">
+                        <Col mdOffset={3} md={2}>
+                            <Image src={logo} width={150}/>
+                        </Col>
+                        <Col md={6}>
+                            <div className="header">
                                 <h1>Brutal Age Guide</h1>
                                 <p className="italic">By Paper</p>
-                            </Media.Body>
-                        </Media>
+                            </div>
+                        </Col>
                     </Row>
                     <Row className="home-row">
                         <p className="indent">This is a guide on the partners aspect of the game.

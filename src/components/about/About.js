@@ -26,7 +26,7 @@ export default class About extends Component {
             <Grid>
                 <Jumbotron>
                     <p className="indent">Hi, I'm Paper and I am from server 283 Juno. I have been playing this game for 4 months.
-                        I have learned alot throughout my 4 months and I create this guide to shared what I've learned. 
+                        I have learned alot throughout my 4 months and I created this guide to share what I've learned. 
                     </p>
                     <p className="indent">
                         I myself don't spend much money on the game, 
@@ -36,7 +36,7 @@ export default class About extends Component {
                     </p>
                     <p className="indent">If you have any question, or any infomation to correct me on, feel free to contact me via LINE, my LINE ID is "pyroblazer134". Enjoy!</p>
                     <p className="indent">This whole website was coded and designed by myself on my free time, 
-                        if you would like to show some appreciation and donated, here's my
+                        if you would like to show some appreciation and donate, here's my
                         <span className="about-link" onClick={this.handleShow}> PayPal</span>
                     </p>
 

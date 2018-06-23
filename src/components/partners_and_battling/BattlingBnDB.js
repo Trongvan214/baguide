@@ -83,47 +83,57 @@ export default class BattlingBnDB extends Component {
                     Buffs and Debuffs
                 </PageHeader>
                 <Row className="bndb-row">
-                    <p className="indent"> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
-                        Buffs and debuffs are advantages and disadvantages that can happen to partners during a battle.
-                        Below you will find a list of buffs and debuffs in the game.
-                        The blue color is the buff, which give you an advantage during the fight.  
-                        The red is the debuff, which give will give you a disadvantage in the fight.
-                    </p>
-                    <p className="indent">
-                        These buffs/debuffs are time limited, at the bottom right you will see a number,
-                        it represent the numbers of rounds it will last. 
-                        One round is past after the partner uses it's turn. 
-                        So this means, the duration of the buff will depends on the spd (stats) of the partners. 
-                        Faster spd partners will have the buff on for shorter amount of time, and slower partners will have it for longer.
-                        This isn't a bad thing, I will discuss why in battling.
-                    </p>
+                    <Col className="no-pad-col-425" md={12}>
+                        <p className="indent"> When partners are in a battle, their skills can trigger buffs or debuffs for themselves or the ememies.
+                            Buffs and debuffs are advantages and disadvantages that can happen to partners during a battle.
+                            Below you will find a list of buffs and debuffs in the game.
+                            The blue color is the buff, which give you an advantage during the fight.  
+                            The red is the debuff, which give will give you a disadvantage in the fight.
+                        </p>
+                    </Col>
                 </Row>
-                <Row className="bndb-example">
+                <Row className="bndb-row">
+                    <Col className="no-pad-col-425" md={12}>
+                        <p className="indent">
+                            These buffs/debuffs are time limited, at the bottom right you will see a number,
+                            it represent the numbers of rounds it will last. 
+                            One round is past after the partner uses it's turn. 
+                            So this means, the duration of the buff will depends on the spd (stats) of the partners. 
+                            Faster spd partners will have the buff on for shorter amount of time, and slower partners will have it for longer.
+                            This isn't a bad thing, I will discuss why in battling.
+                        </p>
+                    </Col>
+                </Row>
+                <Row className="bndb-row vcenter bndb-display">
                     <Col md={10}
                         sm={8}
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <p className="indent">Most of the buff/debuff aren't stackable, that means you can't stack up the rounds or have multiple of the same buff/debuff. 
                                 The only buff/debuff that's stackable is the poison debuff, you can have multiple poison inflicted on the ememy (can't stack rounds).
                         </p>
                     </Col>
                     <Col md={2}
-                         sm={4}
+                        sm={4} 
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <Image src={stackdebuff} alt="stackbuff"/>
                     </Col>
                 </Row>
-                <Row className="bndb-example">
+                <Row className="bndb-row vcenter bndb-display">
                     <Col md={2}
                          sm={4}
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <Image src={buffexample} alt="stackbuff" responsive/>
                     </Col>
                     <Col md={10}
                         sm={8}
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <p className="indent">Example of buff, let's say your blue beserker have an overall def of 1000 (500 from basic stats, 500 from addition stats) 
                                 ,and it got a def buff, which increases it's def by 70% (scroll down to see the buffs info.). It should now have 1000 + (1000 * .7) = 1700 def.
@@ -136,12 +146,14 @@ export default class BattlingBnDB extends Component {
                     </Col>
                 </Row>
                 <Row className="bndb-row">
-                    <h1>List of Buffs</h1>
+                    <Col md={12} className="no-pad-col-425">
+                        <h1>List of Buffs</h1>
+                    </Col>
                 </Row>
                 <Row>
                     {
                         this.state.buffs.map((buff, index) => (
-                            <Col md={4} key={index}>
+                            <Col md={4} key={index} className="no-pad-col-425">
                                 <CustomMedia 
                                     term={buff[0]}
                                     definition={buff[1]}
@@ -153,12 +165,14 @@ export default class BattlingBnDB extends Component {
                     }
                 </Row>
                 <Row className="bndb-row">
-                    <h1>List of Debuffs</h1>
+                    <Col md={12} className="no-pad-col-425">
+                        <h1>List of Debuffs</h1>
+                    </Col>
                 </Row>
                 <Row>
                     {
                         this.state.debuffs.map((buff, index) => (
-                            <Col md={4} key={index}>
+                            <Col md={4} key={index} className="bndb-col">
                                 <CustomMedia 
                                     term={buff[0]}
                                     definition={buff[1]}

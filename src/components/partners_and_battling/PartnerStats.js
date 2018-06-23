@@ -15,12 +15,14 @@ export default class PartnerStats extends Component {
                     <Col md={2}
                         sm={5}
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <Image src={allstats} responsive/>
                     </Col>
                     <Col md={10}
                         sm={7}
                         xs={12}
+                        className="no-pad-col-425"
                     >
                         <div className="stats-info">
                             <p><span>HP (Health): </span>Health is how much damage it can take before dying</p>
@@ -35,10 +37,10 @@ export default class PartnerStats extends Component {
                     </Col>
                 </Row>
                 <Row className="vcenter pss-row">
-                    <Col md={4}>
+                    <Col md={4} className="no-pad-col-425">
                         <Image src={stats} responsive/>
                     </Col>
-                    <Col md={8}>
+                    <Col md={8} className="no-pad-col-425">
                         <div className="stats-info">
                             <p><span className="black">Basic Stats: </span>stats unique to each partner</p>
                             <p><span className="red">Additional Stats: </span>stats from war patterns</p>
