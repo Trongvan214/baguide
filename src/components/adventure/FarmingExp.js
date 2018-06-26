@@ -1,55 +1,179 @@
 import React, { Component } from 'react'
-import { Grid, Row, PageHeader, Image, Col } from 'react-bootstrap';
+import { Grid, Row, PageHeader, Image, Col, Table } from 'react-bootstrap';
 import farmingpartnersstage from '../img/farmingpartnersstage.JPG';
+import aidpartner from '../img/aidpartner.JPG';
+import foodpartner from '../img/foodpartner.JPG';
+import battlepartner from '../img/battlepartner.JPG';
+import farmingwith1partner from '../img/farmingwith1partner.JPG';
+import farmingwith4partner from '../img/farmingwith4partner.JPG';
+import perfectexpfarming from '../img/perfectexpfarming.JPG';
+import realityexpfarming from '../img/realityexpfarming.JPG';
+import increasingstars from '../img/increasingstars.JPG';
+import _1starpartner from '../img/1starpartner.JPG';
+import _2starspartner from '../img/2starspartner.JPG';
+import _3starspartner from '../img/3starspartner.JPG';
+import _4starspartner from '../img/4starspartner.JPG';
+import _5starspartner from '../img/5starspartner.JPG';
+import map from '../img/map.PNG';
+import './FarmingExp.css';
 
 export default class FarmingExp extends Component {
     render(){
+        const { islandInfo } = this.props;
         return (
-        <Grid>
+        <Grid className="fe">
             <PageHeader>
                 Farming Exp
             </PageHeader>
-            <Row className="af-box">
-                <Col>
-                    <p className="indent">When it comes to farming exp, ideally you want 4 partners who isn't max level so they can gain exp at the end. 
-                        for farming is to have 4 non-max level partners so all of the partners get exp at the end, 
-                        but sometimes stages are too hard and required strong partners that's already max. 
-                        So to make the best use of it, below is a strategy to use to be more efficient. 
+            <Row className="fe-row vcenter">
+                <Col mdOffset={1} md={8} className="no-pad-col-425">
+                    <p>When it comes to farming exp, 
+                    ideally you want 4 partners who isn't max level so they all can gain exp at the end.
                     </p>
                 </Col>
-            </Row>
-            <Row className="af-box">
-                <Col md={12}>
-                <p>Before I explain here are some terms you need to know</p>
-                <ul>
-                    <li>Battle partners are partners that you will use for combat</li>
-                    <li>Food partners are partners that you will use to upgrade the star of battle partners</li>
-                    <li>Aid partners are low stars partners (1-4 stars) 
-                    that you will max it's level and raise it's stars and use as food partners later</li>
-                </ul>
+                <Col md={2}>
+                    <Image src={perfectexpfarming} responsive/>
                 </Col>
             </Row>
-            <Row className="af-box">
-                <Col md={12}>
-                    <p>The best aid partners are 3 stars because its not too low in stars to the point where 
-                        it takes forever to turn into a high stars food partners. 
-                        And it's also not very hard to get I'll talk about how to farm these aid partners later.
+            <Row className="fe-row vcenter">
+                <Col mdOffset={1} md={8} className="no-pad-col-425">
+                    <p>But most of the time you will need 1-2 battle partner (definition below) to help clear stronger stages.
+                        So you will usually have partners that's already max level and the exp giving would just be wasted.
                     </p>
                 </Col>
-            </Row>
-            <Row className="af-box">
-                <Col md={12}>
-                <p>Before I explain here are some terms you need to know</p>
-                    <p>
-                        Now for farming and making the best use of exp. The best strategy is to use 
-                        just enough battle partners to be able to clear the stage, and fill the rest with aid partners.
-                        This way you would get exp for those aid partners that you later use for food.
-                    </p>  
+                <Col md={2}>
+                    <Image src={realityexpfarming} responsive/>
                 </Col>
-            </Row>  
+            </Row>
+            <PageHeader>
+                Functional types of partners
+            </PageHeader>
+            <Row className="fe-partners-types">
+                <Col md={4}>
+                    <Image src={battlepartner} responsive/>
+                    <h1>Battle partners</h1>
+                    <p>Partners that you will use for combat usually high in stars and deck out in war patterns</p>
+                </Col>
+                <Col md={4}>
+                    <Image src={foodpartner} responsive/>
+                    <h1>Food partners</h1>
+                    <p>Partners that you will use to upgrade the star of other partners usually lv 1</p>
+                </Col>
+                <Col md={4}>
+                    <Image src={aidpartner} responsive/>
+                    <h1>Aid partners</h1>
+                    <p>Low stars partners (1-4 stars) 
+                    that you will max it's level and raise it's stars and use as food partners later</p>
+                </Col>
+            </Row>
+            <PageHeader>
+                Food partners
+            </PageHeader>
             <Row className="vcenter">
-                <Col md={8}>
-                <h1>Farming aid partners</h1>
+                <Col mdOffset={1} md={7}>
+                    <p className="indent">Food partners are needed when you when you want to raise a star of for a partner.
+                        The partner has to be max level and there's a certain number of partners (same stars) that must sacrifice.
+                        And since those partners will just disppear and doesn't need to be at any specific level.
+                        It's best and efficient to just keep them lvl 1. 
+                        The best food partners to use and sacrifice are the aid partners. 
+                        These partners are less expensive than actually trying to find the material. 
+                        Some of those material are expensive like natural 4-5 stars and if you were to wait from them and not use aid partners,
+                        it will take a while.
+                    </p>
+                </Col>
+                <Col md={3}>
+                    <Image src={increasingstars} responsive/>
+                </Col>
+            </Row>
+            <PageHeader>
+                Aid partners
+            </PageHeader>
+            <Row>
+                <Col mdOffset={1} md={2}>
+                    <Image src={_1starpartner} responsive/>
+                </Col>
+                <Col md={2}>
+                    <Image src={_2starspartner} responsive/>
+                </Col>
+                <Col md={2}>
+                    <Image src={_3starspartner} responsive/>
+                </Col>
+                <Col md={2}>
+                    <Image src={_4starspartner} responsive/>
+                </Col>
+                <Col md={2}>
+                    <Image src={_5starspartner} responsive/>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={12}>
+                    <p className="indent">From the list above you can see the 1-5 natural stars partners, 
+                        natural stars means that's the amount of stars the partner starts with before any star upgrades.</p>
+                    <p className="indent">First off, 5 stars can't be aid partners. Because once you max and turn it into a 6 stars,
+                            there isn't a 6 stars food partner to sacrifice.
+                            The best aid partners are 3 stars 
+                            because its not too low in stars to the point where 
+                            it takes forever to turn into a high stars food partners. 
+                            And it's not too high where you can only find the partners by spinning turtles.
+                            The same logic goes for using the food partners, it's best to use a 3 narutal stars partners 
+                            and turn it into a 5 stars for food then using a 5 stars you got from spinning turtles to sacrifice. 
+                    </p>
+                </Col>
+            </Row>
+            <PageHeader>
+                Tips
+            </PageHeader>
+            <Row className="vcenter">
+                <Col mdOffset={1} md={4}> 
+                    <p>One thing that alot of people probably doesn't know is that clearing a stage gives a total amount of exp, 
+                        and this total is split evenly to how many partners used. </p>
+                </Col>
+                <Col md={3}>
+                    <Image src={farmingwith1partner} responsive/>
+                </Col>
+                <Col md={3}>
+                    <Image src={farmingwith4partner} responsive/>
+                </Col>
+            </Row>
+            <PageHeader>
+                Table for Exp
+            </PageHeader>
+            <Row>
+                <Col md={12}>
+                    <p>This is a table for the last stage on purgatory and using 4 partners to clear</p>
+                </Col>
+            </Row>
+            <Row className="fe-row vcenter fe-table">
+                <Col mdOffset={1} md={7} className="no-pad-col-425">
+                    <h1>Last stage on Purgatory statistic</h1>
+                    <Table responsive>
+                        <thead>
+                            <tr>
+                                <th>Island</th>
+                                <th>Exp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                islandInfo.map(island => (
+                                    <tr key={island.islandName}>
+                                        <td>{island.islandName}</td>
+                                        <td>{island.exp}</td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </Table>
+                </Col>
+                <Col md={3}>
+                    <Image src={map} responsive/>
+                </Col>
+            </Row>
+            <PageHeader>
+                Farming aid partners
+            </PageHeader>
+            <Row className="vcenter">
+                <Col md={8} className="no-pad-col-425">
                 <p>
                     This is goes together with farming exp. If you are using the strategy for farming exp you will find yourself needing alot
                     3 stars to use as aid and food partners. One of the best spot that I found to farm 3 stars partners
@@ -58,7 +182,7 @@ export default class FarmingExp extends Component {
                     It's so cheaper and only cost 3 energy.
                 </p>
                 </Col>   
-                <Col md={4}>
+                <Col md={4} className="no-pad-col-425">
                     <Image src={farmingpartnersstage} responsive/>
                 </Col>
             </Row>
