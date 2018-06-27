@@ -2,6 +2,9 @@
     text-indent: 5%;
     font-size: 1.3em;
 }
+.af p {
+    line-height: 30px;
+}
 .af-row {
     margin: 20px 0;
 }

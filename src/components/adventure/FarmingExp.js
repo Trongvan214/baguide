@@ -26,7 +26,7 @@ export default class FarmingExp extends Component {
                 Farming Exp
             </PageHeader>
             <Row className="fe-row vcenter">
-                <Col mdOffset={1} md={8} className="no-pad-col-425">
+                <Col mdOffset={1} md={8}>
                     <p>When it comes to farming exp, 
                     ideally you want 4 partners who isn't max level so they all can gain exp at the end.
                     </p>
@@ -36,7 +36,7 @@ export default class FarmingExp extends Component {
                 </Col>
             </Row>
             <Row className="fe-row vcenter">
-                <Col mdOffset={1} md={8} className="no-pad-col-425">
+                <Col mdOffset={1} md={8}>
                     <p>But most of the time you will need 1-2 battle partner (definition below) to help clear stronger stages.
                         So you will usually have partners that's already max level and the exp giving would just be wasted.
                     </p>
@@ -48,7 +48,7 @@ export default class FarmingExp extends Component {
             <PageHeader>
                 Functional types of partners
             </PageHeader>
-            <Row className="fe-partners-types">
+            <Row className="fe-row fe-types">
                 <Col md={4}>
                     <Image src={battlepartner} responsive/>
                     <h1>Battle partners</h1>
@@ -88,7 +88,7 @@ export default class FarmingExp extends Component {
             <PageHeader>
                 Aid partners
             </PageHeader>
-            <Row>
+            <Row className="fe-row fe-aid-explain">
                 <Col mdOffset={1} md={2}>
                     <Image src={_1starpartner} responsive/>
                 </Col>
@@ -105,7 +105,7 @@ export default class FarmingExp extends Component {
                     <Image src={_5starspartner} responsive/>
                 </Col>
             </Row>
-            <Row>
+            <Row className="fe-row">
                 <Col md={12}>
                     <p className="indent">From the list above you can see the 1-5 natural stars partners, 
                         natural stars means that's the amount of stars the partner starts with before any star upgrades.</p>
@@ -123,7 +123,7 @@ export default class FarmingExp extends Component {
             <PageHeader>
                 Tips
             </PageHeader>
-            <Row className="vcenter">
+            <Row className="fe-row vcenter">
                 <Col mdOffset={1} md={4}> 
                     <p>One thing that alot of people probably doesn't know is that clearing a stage gives a total amount of exp, 
                         and this total is split evenly to how many partners used. </p>
@@ -138,13 +138,15 @@ export default class FarmingExp extends Component {
             <PageHeader>
                 Table for Exp
             </PageHeader>
-            <Row>
+            <Row className="fe-row">
                 <Col md={12}>
-                    <p>This is a table for the last stage on purgatory and using 4 partners to clear</p>
+                    <p>This is a table for the last stage on purgatory and using 4 partners to clear. 
+                        So looking at table you know which one is the best to farm in.
+                    </p>
                 </Col>
             </Row>
             <Row className="fe-row vcenter fe-table">
-                <Col mdOffset={1} md={7} className="no-pad-col-425">
+                <Col mdOffset={1} md={7}>
                     <h1>Last stage on Purgatory statistic</h1>
                     <Table responsive>
                         <thead>
@@ -172,8 +174,8 @@ export default class FarmingExp extends Component {
             <PageHeader>
                 Farming aid partners
             </PageHeader>
-            <Row className="vcenter">
-                <Col md={8} className="no-pad-col-425">
+            <Row className="fe-row vcenter">
+                <Col md={8}>
                 <p>
                     This is goes together with farming exp. If you are using the strategy for farming exp you will find yourself needing alot
                     3 stars to use as aid and food partners. One of the best spot that I found to farm 3 stars partners
@@ -182,7 +184,7 @@ export default class FarmingExp extends Component {
                     It's so cheaper and only cost 3 energy.
                 </p>
                 </Col>   
-                <Col md={4} className="no-pad-col-425">
+                <Col md={4}>
                     <Image src={farmingpartnersstage} responsive/>
                 </Col>
             </Row>

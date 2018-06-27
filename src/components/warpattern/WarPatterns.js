@@ -3,20 +3,21 @@ import { Grid, Tabs, Tab } from 'react-bootstrap';
 import './WarPatterns.css';
 import WarPatternStats from './WarPatternStats';
 import WarPatternRarities from './WarPatternRarities';
+import WarPatternUpgrades from './WarPatternUpgrades'
+import ChoosingPatterns from './ChoosingPatterns';
 
 export default class WarPatterns extends Component {
     render(){
         return (
             <Grid>
-                <Tabs defaultChecked={1} id="wp-tabs">
+                <Tabs defaultActiveKey={1} id="wp-tabs">
                     <Tab eventKey={1} title="Stats">
                         <WarPatternStats />
-                    </Tab>
-                    <Tab eventKey={2} title="Rarities">
                         <WarPatternRarities />
+                        <WarPatternUpgrades />
                     </Tab>
-                    <Tab eventKey={2} title="Choosing Patterns">
-                        choosing pattern
+                    <Tab eventKey={3} title="Choosing Patterns">
+                        <ChoosingPatterns />
                     </Tab>
                 </Tabs>
             </Grid>

@@ -7,8 +7,24 @@
 .fe p {
     line-height: 30px;
 }
-.fe-partners-types h1 {
+.fe-types h1 {
     text-align: center;
     font-size: 1.6em;
     font-weight: bold;
+}
+
+@media screen and (max-width: 425px) {
+    .fe-aid-explain img {
+        width: 100%;
+    }
+    .fe-types h1 {
+        font-size: 1.9em;
+    }
+    .fe-types > div {
+        margin-top: 40px;
+    }
+
+    .fe-aid-explain > div {
+        margin: 20px 0;
+    }
 }

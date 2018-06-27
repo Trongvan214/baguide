@@ -1,0 +1,17 @@
+.et-table h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.et-table table,
+.et-table table th {
+    text-align: center;
+}
+.et-table table th:first-child {
+    text-align: left !important;
+}
+.et-table table td:first-child{
+    padding-left: 12px;
+    text-align: left;
+}

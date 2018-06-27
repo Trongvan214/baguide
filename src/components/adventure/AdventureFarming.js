@@ -28,7 +28,7 @@ export default class AdventureFarming extends Component {
     }
     render(){
         return (
-            <Grid>
+            <Grid className="af">
                 <Row>
                     <Tabs defaultActiveKey={4} id="adventurefarming">
                         <Tab eventKey={1} title="Introduction">
