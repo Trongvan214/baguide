@@ -172,7 +172,7 @@ export default class BattlingBnDB extends Component {
                 <Row>
                     {
                         this.state.debuffs.map((buff, index) => (
-                            <Col md={4} key={index} className="bndb-col">
+                            <Col md={4} key={index} className="no-pad-col-425">
                                 <CustomMedia 
                                     term={buff[0]}
                                     definition={buff[1]}

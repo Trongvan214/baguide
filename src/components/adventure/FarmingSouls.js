@@ -9,7 +9,7 @@ export default class FarmingSouls extends Component {
                 <PageHeader>
                     Farming Souls
                 </PageHeader>
-                <Row className="fs-row vcenter">
+                <Row className="fs-row fs-table vcenter">
                     <Col mdOffset={1} md={5}>
                         <p className="indent">
                             If you look at the chart (not here yet) you can see which islands will give you the most for your buck. 
@@ -19,11 +19,12 @@ export default class FarmingSouls extends Component {
                     </Col>
                     <Col md={5}>
                         <h1>Last stage on Purgatory statistic</h1>
-                        <Table responsive>
+                        <Table responsive bordered>
                             <thead>
                                 <tr>
                                     <th>Island</th>
-                                    <th>Clearing Stage souls</th>
+                                    <th>Stage</th>
+                                    <th>Selling</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,6 +33,7 @@ export default class FarmingSouls extends Component {
                                         <tr key={island.islandName}>
                                             <td>{island.islandName}</td>
                                             <td>{island.souls}</td>
+                                            <td>{island.selling}</td>
                                         </tr>
                                     ))
                                 }

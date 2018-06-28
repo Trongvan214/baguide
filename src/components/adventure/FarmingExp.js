@@ -121,6 +121,23 @@ export default class FarmingExp extends Component {
                 </Col>
             </Row>
             <PageHeader>
+                Farming aid partners
+            </PageHeader>
+            <Row className="fe-row vcenter">
+                <Col md={8}>
+                <p>
+                    This is goes together with farming exp. If you are using the strategy for farming exp you will find yourself needing alot
+                    3 stars to use as aid and food partners. One of the best spot that I found to farm 3 stars partners
+                    is Cave 8-1 Normal mode. The only partners you can get are 3 stars partners on this island.
+                    The reason why normal is because, in normal mode you can't get 15min speed up, so there odds are better.
+                    It's so cheaper and only cost 3 energy.
+                </p>
+                </Col>   
+                <Col md={4}>
+                    <Image src={farmingpartnersstage} responsive/>
+                </Col>
+            </Row>
+            <PageHeader>
                 Tips
             </PageHeader>
             <Row className="fe-row vcenter">
@@ -148,7 +165,7 @@ export default class FarmingExp extends Component {
             <Row className="fe-row vcenter fe-table">
                 <Col mdOffset={1} md={7}>
                     <h1>Last stage on Purgatory statistic</h1>
-                    <Table responsive>
+                    <Table responsive bordered>
                         <thead>
                             <tr>
                                 <th>Island</th>
@@ -170,24 +187,7 @@ export default class FarmingExp extends Component {
                 <Col md={3}>
                     <Image src={map} responsive/>
                 </Col>
-            </Row>
-            <PageHeader>
-                Farming aid partners
-            </PageHeader>
-            <Row className="fe-row vcenter">
-                <Col md={8}>
-                <p>
-                    This is goes together with farming exp. If you are using the strategy for farming exp you will find yourself needing alot
-                    3 stars to use as aid and food partners. One of the best spot that I found to farm 3 stars partners
-                    is Cave 8-1 Normal mode. The only partners you can get are 3 stars partners on this island.
-                    The reason why normal is because, in normal mode you can't get 15min speed up, so there odds are better.
-                    It's so cheaper and only cost 3 energy.
-                </p>
-                </Col>   
-                <Col md={4}>
-                    <Image src={farmingpartnersstage} responsive/>
-                </Col>
-            </Row>
+            </Row>   
         </Grid>
         )
     }

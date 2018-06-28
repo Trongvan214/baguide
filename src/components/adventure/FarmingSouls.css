@@ -1,3 +1,21 @@
+.fs-table h1 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.fs-table table,
+.fs-table table th {
+    text-align: center;
+}
+.fs-table table th:first-child {
+    text-align: left !important;
+}
+.fs-table table td:first-child{
+    padding-left: 12px;
+    text-align: left;
+}
+
 .fs-row h1 {
     font-size: 1.9em;
     text-align: center;

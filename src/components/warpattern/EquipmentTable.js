@@ -37,7 +37,7 @@ export default class EquipmentTable extends Component {
         const { heading, ETypes } = this.state;
         return (
             <Row className="et-table">
-                <Col md={9}>
+                <Col mdOffset={1} md={7}>
                     <Table responsive bordered>
                         <thead>
                             <tr>
@@ -68,11 +68,13 @@ export default class EquipmentTable extends Component {
                     </Table>
                 </Col>
                 <Col md={3}>
-                    <h1>Key</h1>
-                    <ul>
-                        <li># = fixed amount</li>
-                        <li>% = dynamic amount</li>
-                    </ul>
+                    <div className="et-key">
+                        <h1>Key</h1>
+                        <ul>
+                            <li># = fixed amount</li>
+                            <li>% = dynamic amount</li>
+                        </ul>
+                    </div>
                 </Col>
             </Row>
         )

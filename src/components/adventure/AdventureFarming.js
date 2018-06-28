@@ -30,7 +30,7 @@ export default class AdventureFarming extends Component {
         return (
             <Grid className="af">
                 <Row>
-                    <Tabs defaultActiveKey={4} id="adventurefarming">
+                    <Tabs defaultActiveKey={1} id="adventurefarming">
                         <Tab eventKey={1} title="Introduction">
                             <FarmingIntro />
                         </Tab>

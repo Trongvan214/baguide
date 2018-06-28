@@ -27,14 +27,19 @@ export default class Home extends Component {
                             There are things that are collected directly from the game forum,
                             and there are also things which are only tested in the game. So believe them at your own risks.   
                         </p>
+                        <p className="indent">If you are viewing this inside an app's browser, it might not work right. 
+                        Please use your own browser if that happens, here's the link to copy and paste</p>
+                        <a href="https://trongvan214.github.io/baguide/" rel="noopener noreferrer" target="_blank"> 
+                            https://trongvan214.github.io/baguide/
+                        </a>
                     </Row>
                     <Row className="home-download">
-                        <Col md={6}>
+                        <Col md={6} xs={6}>
                             <a href="https://itunes.apple.com/us/app/brutal-age-horde-invasion/id1156787368?mt=8" rel="noopener noreferrer" target="_blank"> 
                                 <Image src={ios} responsive />
                             </a>
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} xs={6}>
                             <a href="https://play.google.com/store/apps/details?id=com.tap4fun.brutalage_test&hl=en_US" rel="noopener noreferrer" target="_blank"> 
                                 <Image src={android} responsive />
                             </a>

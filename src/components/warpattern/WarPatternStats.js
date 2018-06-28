@@ -10,21 +10,18 @@ export default class WarPatternStats extends Component {
         return (
             <Grid>
                 <PageHeader>
-                    Pattern Info
+                    War Pattern
                 </PageHeader>
-                <Row className="vcenter">
+                <Row className="margin-top-2 vcenter">
                     <Col md={4}>
                         <Image src={explainingattribute} responsive /> 
                     </Col>
-                    <Col>
-                    <div className="stats-type">
+                    <Col md={7}>
                             <p><span className="red bold">Main Stats: </span>stats that increases every upgrade</p>
                             <p><span className="yellow bold">Bonus Stats: </span>stats that are obtain or improved every +3 uprgrade</p>
-                        </div>
                     </Col>
                 </Row>
-                <PageHeader>Forms of Value</PageHeader>
-                <Row>  
+                <Row className="margin-top-2">  
                     <Col md={6}>
                         <Media>
                             <Media.Left>

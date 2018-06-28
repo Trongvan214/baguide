@@ -62,8 +62,13 @@ export default class PartnerTypes extends Component {
                     <p>1. <span className="bold">Deflection</span>: reduce incoming damage by 30% and immune to any debuff</p>
                     <div className="indent">
                         <p>
-                            Exp: If 2 partners of different types are fighting (Brave and Wild), the stronger type of the 2 (Brave) 
+                            Exp: If 2 partners of different types are fighting (Brave and Wild), the stronger attribute of the 2 (Brave) 
                             will have a higher chance to trigger deflection when it's being hit by the weaker type (Wild).
+                        </p>
+                        <p>"Tip" This means that no matter how high your hit% is when going against the stronger attribute, 
+                            there's a high chance the debuff won't work. 
+                            Some things that I have seen to overcome this is skills that reduce action bar like blue elephant.
+                            It's not gonna put a debuff on them so this will always trigger calculated by your HIT% vs ememy's RES% 
                         </p>
                     </div>
                     <p>2. <span className="bold">Bash</span>: do 30% more damage</p>

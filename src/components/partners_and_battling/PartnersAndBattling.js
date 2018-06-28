@@ -9,7 +9,7 @@ export default class Battling extends Component {
     state = {
         key: "partner",
     }
-    componentWillMount(){
+    componentDidMount(){
         let key = this.props.match.params.section;
         if(key){
             this.setState({key});

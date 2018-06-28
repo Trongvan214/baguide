@@ -10,17 +10,19 @@ import purplepattern from '../img/purplepattern.JPG';
 export default class WarPatternEquipments extends Component {
     render(){
         return (
-            <Grid>
-                <PageHeader>
-                    War Pattern Rarities
-                </PageHeader>
-                <Row className="wp-row">
-                        <p className="indent">War pattern have 5 different rarities: Common (white), Magic(green), Rare(blue), Ancient(orange), Legendary(purple). 
-                            Below I provided a picture of each rarity, you can tell which rarity it is by the color of it's name. 
-                            You can also see that with each rarity you get an extra bonus stats.
-                        </p>
+                <Grid>
+                    <PageHeader>
+                        War Pattern Rarities
+                    </PageHeader>
+                    <Row className="wp-row">
+                        <Col md={12}>
+                            <p className="indent">War pattern have 5 different rarities: Common (white), Magic(green), Rare(blue), Ancient(orange), Legendary(purple). 
+                                Below I provided a picture of each rarity, you can tell which rarity it is by the color of it's name. 
+                                You can also see that with each rarity you get an extra bonus stats slot.
+                            </p>
+                        </Col>
                     </Row>
-                    <Row className="wpr-display">
+                    <Row>
                         <Col mdOffset={1} md={2}>
                             <Image src={whitepattern} responsive />
                         </Col>
@@ -37,10 +39,7 @@ export default class WarPatternEquipments extends Component {
                             <Image src={purplepattern} responsive /> 
                         </Col>
                     </Row>
-                    <Row>
-
-                    </Row>
-            </Grid>
+                </Grid>
         )
     }
 }

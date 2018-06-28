@@ -18,8 +18,8 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/adventure" component={AdventureFarming} />
             <Route path="/partners/:section" component={Partners} />
-            <Route path="/partners" component={Partners} />
-            <Route path="/patterns" component={WarPatterns} />
+            <Route path="/partners/" component={Partners} />
+            <Route path="/patterns/" component={WarPatterns} />
             <Route path="/about" component={About} />
           </Switch>
         </React.Fragment>

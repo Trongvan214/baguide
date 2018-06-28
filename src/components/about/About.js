@@ -29,14 +29,13 @@ export default class About extends Component {
                         I have learned alot throughout my 4 months and I created this guide to share what I've learned. 
                     </p>
                     <p className="indent">
-                        I myself don't spend much money on the game, 
+                        Being a college student, I myself don't spend much money on the game, 
                         so some of the stragigies I use isn't going to be of much help for the big spenders.
                         But I also have some infomation here that's useful for everybody, 
                         and everybody should know them if they are serious about partners.
                     </p>
                     <p className="indent">If you have any question, or any infomation to correct me on, feel free to contact me via LINE, my LINE ID is "pyroblazer134". Enjoy!</p>
-                    <p className="indent">This whole website was coded and designed by myself on my free time, 
-                        if you would like to show some appreciation and donate, here's my
+                    <p className="indent">If you would like to show some appreciation and donate, here's my
                         <span className="about-link" onClick={this.handleShow}> PayPal</span>
                     </p>
 
