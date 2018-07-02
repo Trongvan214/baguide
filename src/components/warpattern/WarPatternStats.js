@@ -4,6 +4,7 @@ import { Grid, Row, Col, Image, Media, PageHeader } from 'react-bootstrap';
 import explainingattribute from '../img/explainingstats.JPG';
 import fixedattribute from '../img/fixedstats.JPG';
 import dynamicattribute from '../img/dynamicstats.JPG';
+import EquipmentTable from './EquipmentTable';
 
 export default class WarPatternStats extends Component {
     render(){
@@ -45,13 +46,16 @@ export default class WarPatternStats extends Component {
                                     <Link to="/partners/stats"> basic stats</Link>.
                                 </p>
                                 <p>
-                                    Amount = basic stats X ( % / 100)
+                                    Amount = basic stats * ( % / 100)
                                 </p>
                             </Media.Body>
                         </Media>
                     </Col>
-                    
                 </Row>
+                <PageHeader>
+                    Equipment Table
+                </PageHeader>
+                <EquipmentTable />
             </Grid>
         )
     }

@@ -29,9 +29,11 @@ export default class Home extends Component {
                         </p>
                         <p className="indent">If you are viewing this inside an app's browser, it might not work right. 
                         Please use your own browser if that happens, here's the link to copy and paste</p>
-                        <a href="https://trongvan214.github.io/baguide/" rel="noopener noreferrer" target="_blank"> 
-                            https://trongvan214.github.io/baguide/
-                        </a>
+                        <div className="text-center">
+                            <a href="https://trongvan214.github.io/baguide/" rel="noopener noreferrer" target="_blank"> 
+                                https://trongvan214.github.io/baguide/
+                            </a>
+                        </div>
                     </Row>
                     <Row className="home-download">
                         <Col md={6} xs={6}>

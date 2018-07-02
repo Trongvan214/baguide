@@ -13,7 +13,7 @@ import _1starpartner from '../img/1starpartner.JPG';
 import _2starspartner from '../img/2starspartner.JPG';
 import _3starspartner from '../img/3starspartner.JPG';
 import _4starspartner from '../img/4starspartner.JPG';
-import _5starspartner from '../img/5starspartner.JPG';
+// import _5starspartner from '../img/5starspartner.JPG';
 import map from '../img/map.PNG';
 import './FarmingExp.css';
 
@@ -27,6 +27,7 @@ export default class FarmingExp extends Component {
             </PageHeader>
             <Row className="fe-row vcenter">
                 <Col mdOffset={1} md={8}>
+                    <p>Farming exp is a very important if you want to have multiple 6 stars.</p>
                     <p>When it comes to farming exp, 
                     ideally you want 4 partners who isn't max level so they all can gain exp at the end.
                     </p>
@@ -62,7 +63,7 @@ export default class FarmingExp extends Component {
                 <Col md={4}>
                     <Image src={aidpartner} responsive/>
                     <h1>Aid partners</h1>
-                    <p>Low stars partners (1-4 stars) 
+                    <p>Low stars partners (1-4 natural stars) 
                     that you will max it's level and raise it's stars and use as food partners later</p>
                 </Col>
             </Row>
@@ -89,34 +90,33 @@ export default class FarmingExp extends Component {
                 Aid partners
             </PageHeader>
             <Row className="fe-row fe-aid-explain">
-                <Col mdOffset={1} md={2}>
+                <Col md={3}>
                     <Image src={_1starpartner} responsive/>
                 </Col>
-                <Col md={2}>
+                <Col md={3}>
                     <Image src={_2starspartner} responsive/>
                 </Col>
-                <Col md={2}>
+                <Col md={3}>
                     <Image src={_3starspartner} responsive/>
                 </Col>
-                <Col md={2}>
+                <Col md={3}>
                     <Image src={_4starspartner} responsive/>
-                </Col>
-                <Col md={2}>
-                    <Image src={_5starspartner} responsive/>
                 </Col>
             </Row>
             <Row className="fe-row">
                 <Col md={12}>
-                    <p className="indent">From the list above you can see the 1-5 natural stars partners, 
+                    <p className="indent">From the list above you can see 4 different aid partners from 1-4 stars, 
                         natural stars means that's the amount of stars the partner starts with before any star upgrades.</p>
                     <p className="indent">First off, 5 stars can't be aid partners. Because once you max and turn it into a 6 stars,
-                            there isn't a 6 stars food partner to sacrifice.
+                            there isn't a 6 stars food partner to sacrifice. 
+                            Because some partners are super hard to get like 5 stars from divide, 
+                            it's easier to turn a 3 stars into a 5 stars and that's what aid partners are. 
+                            Partners you turn into higher stars partners because it's easier then finding them.
                             The best aid partners are 3 stars 
                             because its not too low in stars to the point where 
                             it takes forever to turn into a high stars food partners. 
                             And it's not too high where you can only find the partners by spinning turtles.
-                            The same logic goes for using the food partners, it's best to use a 3 narutal stars partners 
-                            and turn it into a 5 stars for food then using a 5 stars you got from spinning turtles to sacrifice. 
+                            This is why aid partners are to use to sacrifice as food partners.
                     </p>
                 </Col>
             </Row>
@@ -125,8 +125,8 @@ export default class FarmingExp extends Component {
             </PageHeader>
             <Row className="fe-row vcenter">
                 <Col md={8}>
-                <p>
-                    This is goes together with farming exp. If you are using the strategy for farming exp you will find yourself needing alot
+                <p className="indent">
+                    If you are using the strategy for farming exp you will find yourself needing alot
                     3 stars to use as aid and food partners. One of the best spot that I found to farm 3 stars partners
                     is Cave 8-1 Normal mode. The only partners you can get are 3 stars partners on this island.
                     The reason why normal is because, in normal mode you can't get 15min speed up, so there odds are better.

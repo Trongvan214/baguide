@@ -26,7 +26,8 @@ export default class BonusStatsTable extends Component {
             <React.Fragment>
                 <Row className="bs-table vcenter">
                     <Col  mdOffset={1} md={12}>
-                        <p>This is a table that show you the maximium value you can get from bonus stats from all different types</p>
+                        <p>This is a table that show you the maximium value you can get added as bonus stats every +3 upgrades</p>
+                        <p>This is mean every +3 upgrades on your patterns, the max value that can be added is below in that chart.</p>
                     </Col>
                 </Row>
                 <Row>

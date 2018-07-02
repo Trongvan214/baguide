@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Tabs, Tab } from 'react-bootstrap';
 import './AdventureFarming.css';
-import FarmingIntro from './FarmingIntro';
+// import FarmingIntro from './FarmingIntro';
 import FarmingPatterns from './FarmingPatterns';
 import FarmingSouls from './FarmingSouls';
 import FarmingExp from './FarmingExp';
@@ -31,17 +31,17 @@ export default class AdventureFarming extends Component {
             <Grid className="af">
                 <Row>
                     <Tabs defaultActiveKey={1} id="adventurefarming">
-                        <Tab eventKey={1} title="Introduction">
+                        {/* <Tab eventKey={1} title="Introduction">
                             <FarmingIntro />
+                        </Tab> */}
+                        <Tab eventKey={1} title="Exp">
+                            <FarmingExp islandInfo={this.state.islandInfo} />
                         </Tab>
                         <Tab eventKey={2} title="Patterns">
                             <FarmingPatterns />
                         </Tab>
                         <Tab eventKey={3} title="Souls">
                             <FarmingSouls islandInfo={this.state.islandInfo} />
-                        </Tab>
-                        <Tab eventKey={4} title="Exp">
-                            <FarmingExp islandInfo={this.state.islandInfo} />
                         </Tab>
                     </Tabs>
                 </Row>

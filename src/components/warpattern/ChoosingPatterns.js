@@ -8,7 +8,6 @@ import ex4 from '../img/findingpattern4.JPG';
 // compare 4 and 5 stars patterns 
 import _4and5patterncompare from '../img/4and5patterncompare.JPG';
 //table 
-import EquipmentTable from './EquipmentTable';
 import BonusStatsTable from './BonusStatsTable';
 //css 
 import './ChoosingPatterns.css';
@@ -34,21 +33,21 @@ export default class ChoosingPatterns extends Component {
                             Due to the constrains on some equipments, we are forced to use fixed amount on some equipments
                             because there isn't any % available for them. The CRD, CR, HIT, RES is % base so they don't have fixed amount.   
                         </p>
-                        <p className="indent"s>SPD is a special case, this only comes in fixed amount for equipments, 
+                        <p className="indent"s>SPD is a special case, this only comes in fixed amount for the left hand, 
                             but it's very valuable and one of the hardest thing to find in adventure in my opinion.
-                            The current META (Most Effective Tactic Available) right now is SPD combo, most the best combo uses SPD.
+                            The current META (Most Effective Tactic Available) right now is SPD combo, most the best combo have high SPD.
                             So if you find SPD patterns don't sell them.
                             Below is the chart which provides the details on what you can get for each equipment parts.
                         </p>
                         <p className="indent">When it comes finding bonus stats, there are some things you need to avoid.
                             most of the time you will want to avoid fixed amount of DEF, HP, ATK as a bonus,
-                            those are pretty much useless and won't much any different. 
+                            those are pretty much useless and won't make much of a different. 
                             It's better to get the % one instead because the majority of the time it will give way more. 
                         </p>
-                        <p className="indent">Knowing that you can should be able to distinguish good and a bad pattern.
+                        <p className="indent">Knowing that you can should be able to distinguish good from bad patterns.
                             I will provide some example below, 
                             but remember just because it have great bonus stats doesn't mean it's the best for the partner.
-                            For each partner most of the time, there's specific stats you want, but it won't be covered in this guide,
+                            For each partner most of the time there's specific stats you want, which won't be covered in this guide.
                         </p>
                     </Col>
                 </Row>
@@ -66,10 +65,6 @@ export default class ChoosingPatterns extends Component {
                         <Image src={ex4} responsive />
                     </Col>
                 </Row>
-                <PageHeader>
-                    Equipment Table
-                </PageHeader>
-                <EquipmentTable />
                 <PageHeader>
                     Bonus Stats Table
                 </PageHeader>
